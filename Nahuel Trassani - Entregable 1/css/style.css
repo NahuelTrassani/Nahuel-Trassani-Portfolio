@@ -1,0 +1,628 @@
+/*
+* BODY
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;*/
+  font-family: "Quicksand", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+* Varios
+*/
+
+.hero-construction {
+  text-align: center;
+  padding: 20px 20px;
+  border: #8b8b8b 1px solid;
+  background-color: white;
+}
+
+.hero-construction h1 {
+  font-size: 3em;
+  color: #333; /* Color para tema claro */
+  margin-bottom: 0.5em;
+}
+
+.hero-construction p {
+  font-size: 1.2em;
+  color: #555; /* Color para tema claro */
+}
+
+#contacto .section-inner ul li span.fa-brands {
+  margin-right: 0.5em; /* Ajusta este valor según lo necesites */
+}
+
+section p {
+  margin: 0;
+  padding: 0;
+}
+
+.content-section {
+  padding: 60px 20px;
+
+  scroll-margin-top: 80px;
+  text-align: left;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+  border-color: #082f52;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  text-align: left;
+}
+
+p {
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-family: open sans;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.8em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.6em;
+}
+
+a {
+  color: #0011ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #2980b9;
+}
+
+.contenedor-imagen {
+  width: 550px; /* Define el tamaño cuadrado del contenedor */
+  height: 550px;
+  overflow: hidden; /* Oculta las partes de la imagen que se desbordan */
+  text-align: center;
+  display: inline;
+  margin-bottom: 40px;
+}
+
+.contenedor-imagen img {
+  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Evita espacios extra debajo de la imagen */
+  margin: 10px auto; /* Centra la imagen dentro del contenedor */
+}
+
+.contenedor-imagen p {
+  text-align: center; /* Centra el texto del párrafo */
+  color: #0e0b0bd7; /* Color del texto */
+  margin-top: 10px; /* Espacio entre la imagen y el texto */
+  display: block; /* Asegura que el párrafo ocupe toda la línea */
+  font-size: 1.2em; /* Tamaño de fuente del texto */
+}
+
+#hero .hero-content {
+  text-align: center;
+  padding: 50px 20px;
+}
+.hero-content {
+  text-align: center;
+  padding: 50px 20px;
+}
+.content-section {
+  padding: 40px 20px;
+}
+
+.section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.project-item {
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/*
+* HEADER
+*/
+
+header {
+  background: linear-gradient(135deg, #1a172c 0%, #082f52 10%);
+  color: white;
+  padding: 0.7em;
+  position: fixed; /* Fija el encabezado */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 102; /* Asegura que esté por encima del contenido */
+  display: flex; /* Habilita Flexbox para el header */
+  justify-content: space-between; /* Espacia los elementos hijos (h1, nav, button) */
+  align-items: center; /* Centra verticalmente los elementos hijos */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  font-family: open sans;
+}
+header p {
+  margin-top: 6px;
+  font-weight: 300;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
+  header .theme-toggle-button {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/*
+* NAV
+*/
+
+nav {
+  margin-top: 8px;
+}
+nav ul {
+  list-style: none;
+  padding: 0 100px 0 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 4px 0;
+}
+
+nav ul li a {
+  color: #bbdefb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 80px 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+  outline: none;
+  align-self: flex-start;
+}
+
+/*
+* MAIN
+*/
+
+main {
+  flex-grow: 1;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  align-items: center;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background-image: url("/images/13164433_5180058.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+main h2 {
+  text-align: center;
+  color: #0c5ca3;
+  margin-bottom: 1rem;
+}
+main p,
+main ul,
+main dl,
+main form {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/*
+* FOOTER
+*/
+
+footer {
+  background: linear-gradient(135deg, #1a172c 0%, #082f52 10%);
+  color: #fff;
+  padding: 10px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 102; /* Asegura que esté por encima del contenido */
+}
+
+footer .footer-section {
+  flex: 1 1 150px;
+  margin: 0 10px 10px 0;
+  width: 80%;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  margin-bottom: 8px;
+}
+
+footer ul li a {
+  color: #dbeafe;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+footer ul li a:hover {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+footer .contact-info p {
+  margin: 5px 0;
+  font-size: 0.8rem;
+  color: #dbeafe;
+}
+footer .social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .social-links ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+footer .social-links ul li a {
+  color: #dbeafe;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+footer .social-links ul li a:hover {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+footer .social-links ul li a .icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+footer .social-links ul li a span.fa-brands {
+  margin-right: 1em;
+}
+/* 
+* Dark Theme  
+*/
+body.dark-theme {
+  background-color: #121212; /* O el color de fondo oscuro que prefieras */
+  color: #e0e0e0;
+}
+
+header.dark-theme {
+  background: #303030;
+  color: #e0e0e0;
+}
+
+main.dark-theme {
+  background: #212121;
+  color: #e0e0e0;
+  background-image: url("/images/jeremy-bishop-8xznAGy4HcY-unsplash.jpg"); /* Ruta a tu imagen de fondo oscuro */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+footer.dark-theme {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: #f5f5f5;
+}
+
+body.dark-theme .theme-toggle-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .theme-toggle-button:focus {
+  box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0.25);
+}
+body.dark-theme #sobre-mi .contenedor-imagen p {
+  color: #e0e0e0; /* Asegura que el texto sea claro */
+}
+body.dark-theme .content-section {
+  background-color: #333; /* Un tono de gris oscuro */
+  color: #e0e0e0; /* Cambia el color del texto dentro de la sección para que contraste */
+  border-color: #555; /* Oscurece el borde, si lo deseas */
+}
+
+body.dark-theme .content-section h2 {
+  color: #f5f5f5; /* Asegura que los títulos de las secciones sean legibles */
+}
+body.dark-theme .proyecto-card {
+  background-color: #444; /* Un tono de gris más oscuro para las tarjetas */
+  color: #e0e0e0; /* Cambia el color del texto dentro de la tarjeta */
+  border-color: #666; /* Oscurece el borde de la tarjeta */
+}
+
+body.dark-theme .proyecto-card h3 {
+  color: #f5f5f5; /* Asegura que los títulos de los proyectos sean legibles */
+}
+
+body.dark-theme .proyecto-card .tecnologias-usadas {
+  color: #ccc; /* Mejora la legibilidad de las tecnologías usadas */
+}
+body.dark-theme .proyecto-card .descripcion-proyecto {
+  color: #ccc; /* Un color gris claro para el texto Lorem Ipsum */
+}
+body.dark-theme a {
+  color: #ffffff; /* Un tono de azul más claro */
+}
+
+body.dark-theme a:hover {
+  color: #0062ff; /* Un tono aún más claro al pasar el ratón */
+}
+
+body.dark-theme .hero-construction {
+  background-color: #121212;
+}
+
+body.dark-theme .hero-construction h1 {
+  color: #ffffff; /* Color para tema oscuro */
+}
+
+body.dark-theme .hero-construction p {
+  color: #e9e9e9; /* Color para tema oscuro */
+}
+.sidebar .theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #bbdefb;
+  transition: background-color 0.3s ease;
+  outline: none;
+  margin-top: auto; /* Empujarlo hacia abajo */
+  margin-bottom: 20px;
+}
+
+.sidebar .theme-toggle-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .theme-toggle-button:focus {
+  box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0.25);
+}
+
+.sidebar #theme-icon {
+  line-height: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+  font-size: 1em;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 8px;
+}
+
+.sidebar .theme-toggle-button {
+  font-size: 1em;
+  width: 30px;
+  height: 30px;
+}
+
+body.dark-theme .sidebar {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: #f5f5f5;
+}
+
+body.dark-theme .sidebar nav ul li a {
+  color: #dbeafe;
+}
+
+body.dark-theme .sidebar .theme-toggle-button {
+  color: #dbeafe;
+}
+
+/*
+* Boton cambio de tema
+*/
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.7em;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  transition: background-color 0.3s ease;
+  outline: none;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+.theme-toggle-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-button:focus {
+  box-shadow: 0 0 0 0.2em rgba(0, 0, 0, 0.25);
+}
+
+#theme-icon {
+  line-height: 0;
+}
+
+/*
+* Card
+*/
+
+.proyecto-card {
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.proyecto-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  text-align: left;
+}
+.descripcion-proyecto {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.tecnologias-usadas {
+  margin-bottom: 10px;
+  color: #777;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+/* Para que las tarjetas se muestren en una fila y se envuelvan en pantallas pequeñas */
+#proyectos .section-inner {
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.proyecto-card {
+  flex-basis: calc(50% - 20px); /* Dos columnas en pantallas medianas */
+}
+
+@media (max-width: 768px) {
+  .proyecto-card {
+    flex-basis: 100%; /* Una columna en pantallas pequeñas */
+  }
+}
+
+/*
+* Sidebar
+*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #1a172c 0%, #082f52 10%);
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 101; /* Mayor que el header original */
+  width: 80px; /* Ancho pequeño */
+  margin-top: 80px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+  color: #bbdefb;
+  text-decoration: none;
+  font-size: 1.2em; /* Íconos más grandes */
+  display: block;
+  padding: 10px;
+  border-radius: 50%; /* Para hacerlo circular */
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 60px;
+    margin-top: 205px;
+  }
+}
