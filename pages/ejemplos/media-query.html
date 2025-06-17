@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Mobile First</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header,
+        main,
+        footer {
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        /* Media query para tabletas */
+        @media (min-width: 600px) {
+            body {
+                padding: 20px;
+            }
+
+            header,
+            main,
+            footer {
+                padding: 20px;
+                text-align: left;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Media query para computadoras de escritorio */
+        @media (min-width: 1024px) {
+            body {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            header,
+            main,
+            footer {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Título del Sitio</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Sección Principal</h2>
+            <p>Contenido relevante para dispositivos móviles.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Pie de página</p>
+    </footer>
+</body>
+
+</html>
