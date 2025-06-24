@@ -37,7 +37,7 @@ body {
 }
 
 #contacto .section-inner ul li span.fa-brands {
-  margin-right: 0.5em; /* Ajusta este valor según lo necesites */
+  margin-right: 0.5em; 
 }
 
 section p {
@@ -122,22 +122,12 @@ a:hover {
   font-size: 1.2em; /* Tamaño de fuente del texto */
 }
 
-#hero .hero-content {
-  text-align: center;
-  padding: 50px 20px;
-}
 .hero-content {
   text-align: center;
   padding: 50px 20px;
 }
-.content-section {
-  padding: 40px 20px;
-}
 
-.section-inner {
-  max-width: 960px;
-  margin: 0 auto;
-}
+
 .project-item {
   margin-bottom: 20px;
   border: 1px solid #eee;
@@ -240,7 +230,7 @@ main {
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  background-image: url("/images/13164433_5180058.svg");
+  background-image: url("images/13164433_5180058.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -365,7 +355,7 @@ header.dark-theme {
 main.dark-theme {
   background: #212121;
   color: #e0e0e0;
-  background-image: url("/images/jeremy-bishop-8xznAGy4HcY-unsplash.jpg"); /* Ruta a tu imagen de fondo oscuro */
+  background-image: url("images/jeremy-bishop-8xznAGy4HcY-unsplash.jpg"); /* Ruta a tu imagen de fondo oscuro */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
