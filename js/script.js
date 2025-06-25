@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const main = document.querySelector("main");
     const footer = document.querySelector("footer");
     const menuList = document.querySelector(".menu-list");
-    const sidebar = document.querySelector(".sidebar"); // Selecciona el sidebar
+    const sidebar = document.querySelector(".sidebar"); // Selecciona el sidebar BEM
 
     function updateIcon() {
         themeToggleButtons.forEach(button => {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             // Aplicar tema oscuro al header (usando clase BEM)
             if (header) {
-                header.classList.toggle("dark-theme");
+                header.classList.toggle("header__dark-theme");
             }
             
             // Aplicar tema oscuro al main
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             // Aplicar tema oscuro al sidebar
             if (sidebar) {  
-                sidebar.classList.toggle("dark-theme");
+                sidebar.classList.toggle("sidebar__dark-theme");
             }
             
             updateIcon();
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         body.classList.add("dark-theme");
         
         if (header) {
-            header.classList.add("dark-theme");
+            header.classList.add("header__dark-theme");
         }
         
         if (main) {
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         if (sidebar) {
-            sidebar.classList.add("dark-theme");
+            sidebar.classList.add("sidebar__dark-theme");
         }
     }
     
