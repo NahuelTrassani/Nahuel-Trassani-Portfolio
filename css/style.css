@@ -37,7 +37,7 @@ body {
 }
 
 #contacto .section-inner ul li span.fa-brands {
-  margin-right: 0.5em; 
+  margin-right: 0.5em;
 }
 
 section p {
@@ -127,7 +127,6 @@ a:hover {
   padding: 50px 20px;
 }
 
-
 .project-item {
   margin-bottom: 20px;
   border: 1px solid #eee;
@@ -136,10 +135,10 @@ a:hover {
 }
 
 /*
-* HEADER
+* HEADER - BEM
 */
 
-header {
+.header {
   background: linear-gradient(135deg, #1a172c 0%, #082f52 10%);
   color: white;
   padding: 0.7em;
@@ -153,37 +152,25 @@ header {
   align-items: center; /* Centra verticalmente los elementos hijos */
 }
 
-header h1 {
+.header__title {
   margin: 0;
   font-size: 2.4rem;
   letter-spacing: 1px;
   font-family: open sans;
 }
-header p {
+
+.header__subtitle {
   margin-top: 6px;
   font-weight: 300;
   font-size: 1rem;
   opacity: 0.85;
 }
 
-@media (max-width: 800px) {
-  header {
-    flex-direction: column;
-  }
-  header .theme-toggle-button {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-/*
-* NAV
-*/
-
-nav {
+.header__nav {
   margin-top: 8px;
 }
-nav ul {
+
+.header__nav-list {
   list-style: none;
   padding: 0 100px 0 0;
   margin: 0 auto;
@@ -193,11 +180,11 @@ nav ul {
   flex-wrap: wrap;
 }
 
-nav ul li {
+.header__nav-item {
   margin: 4px 0;
 }
 
-nav ul li a {
+.header__nav-link {
   color: #bbdefb;
   text-decoration: none;
   font-weight: 600;
@@ -207,10 +194,51 @@ nav ul li a {
   transition: background-color 0.3s ease;
   display: inline-block;
 }
-nav ul li a:hover,
-nav ul li a:focus {
+
+.header__nav-link:hover,
+.header__nav-link:focus {
   outline: none;
   align-self: flex-start;
+}
+
+.header__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.7em;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  transition: background-color 0.3s ease;
+  outline: none;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+.header__theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header__theme-toggle:focus {
+  box-shadow: 0 0 0 0.2em rgba(0, 0, 0, 0.25);
+}
+
+.header__theme-icon {
+  line-height: 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+  .header__theme-toggle {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 /*
@@ -225,12 +253,10 @@ main {
   background-color: #f4f4f4;
   color: #333;
   display: flex;
-
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  background-image: url("images/13164433_5180058.svg");
+  background-image: url("../images/13164433_5180058.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -242,6 +268,7 @@ main h2 {
   color: #0c5ca3;
   margin-bottom: 1rem;
 }
+
 main p,
 main ul,
 main dl,
@@ -275,6 +302,7 @@ footer .footer-section {
   justify-content: center;
   align-items: center;
 }
+
 footer h3 {
   font-weight: 700;
   margin-bottom: 10px;
@@ -283,11 +311,13 @@ footer h3 {
   display: inline-block;
   padding-bottom: 5px;
 }
+
 footer ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 footer ul li {
   margin-bottom: 8px;
 }
@@ -298,15 +328,18 @@ footer ul li a {
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
 footer ul li a:hover {
   color: #ffdd57;
   text-decoration: underline;
 }
+
 footer .contact-info p {
   margin: 5px 0;
   font-size: 0.8rem;
   color: #dbeafe;
 }
+
 footer .social-links ul {
   list-style: none;
   padding: 0;
@@ -318,6 +351,7 @@ footer .social-links ul li {
   align-items: center;
   margin-bottom: 8px;
 }
+
 footer .social-links ul li a {
   color: #dbeafe;
   text-decoration: none;
@@ -332,189 +366,14 @@ footer .social-links ul li a:hover {
   color: #ffdd57;
   text-decoration: underline;
 }
+
 footer .social-links ul li a .icon {
   font-size: 1.2rem;
   margin-right: 10px;
 }
+
 footer .social-links ul li a span.fa-brands {
   margin-right: 1em;
-}
-/* 
-* Dark Theme  
-*/
-body.dark-theme {
-  background-color: #121212; /* O el color de fondo oscuro que prefieras */
-  color: #e0e0e0;
-}
-
-header.dark-theme {
-  background: #303030;
-  color: #e0e0e0;
-}
-
-main.dark-theme {
-  background: #212121;
-  color: #e0e0e0;
-  background-image: url("images/jeremy-bishop-8xznAGy4HcY-unsplash.jpg"); /* Ruta a tu imagen de fondo oscuro */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-}
-
-footer.dark-theme {
-  background: linear-gradient(135deg, #333 0%, #555 100%);
-  color: #f5f5f5;
-}
-
-body.dark-theme .theme-toggle-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-body.dark-theme .theme-toggle-button:focus {
-  box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0.25);
-}
-body.dark-theme #sobre-mi .contenedor-imagen p {
-  color: #e0e0e0; /* Asegura que el texto sea claro */
-}
-body.dark-theme .content-section {
-  background-color: #333; /* Un tono de gris oscuro */
-  color: #e0e0e0; /* Cambia el color del texto dentro de la sección para que contraste */
-  border-color: #555; /* Oscurece el borde, si lo deseas */
-}
-
-body.dark-theme .content-section h2 {
-  color: #f5f5f5; /* Asegura que los títulos de las secciones sean legibles */
-}
-body.dark-theme .proyecto-card {
-  background-color: #444; /* Un tono de gris más oscuro para las tarjetas */
-  color: #e0e0e0; /* Cambia el color del texto dentro de la tarjeta */
-  border-color: #666; /* Oscurece el borde de la tarjeta */
-}
-
-body.dark-theme .proyecto-card h3 {
-  color: #f5f5f5; /* Asegura que los títulos de los proyectos sean legibles */
-}
-
-body.dark-theme .proyecto-card .tecnologias-usadas {
-  color: #ccc; /* Mejora la legibilidad de las tecnologías usadas */
-}
-body.dark-theme .proyecto-card .descripcion-proyecto {
-  color: #ccc; /* Un color gris claro para el texto Lorem Ipsum */
-}
-body.dark-theme a {
-  color: #ffffff; /* Un tono de azul más claro */
-}
-
-body.dark-theme a:hover {
-  color: #0062ff; /* Un tono aún más claro al pasar el ratón */
-}
-
-body.dark-theme .hero-construction {
-  background-color: #121212;
-}
-
-body.dark-theme .hero-construction h1 {
-  color: #ffffff; /* Color para tema oscuro */
-}
-
-body.dark-theme .hero-construction p {
-  color: #e9e9e9; /* Color para tema oscuro */
-}
-.sidebar .theme-toggle-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2em;
-  color: #bbdefb;
-  transition: background-color 0.3s ease;
-  outline: none;
-  margin-top: auto; /* Empujarlo hacia abajo */
-  margin-bottom: 20px;
-}
-
-.sidebar .theme-toggle-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.sidebar .theme-toggle-button:focus {
-  box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0.25);
-}
-
-.sidebar #theme-icon {
-  line-height: 0;
-}
-
-.sidebar nav ul li {
-  margin-bottom: 15px;
-}
-
-.sidebar nav ul li a {
-  font-size: 1em;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  padding: 8px;
-}
-
-.sidebar .theme-toggle-button {
-  font-size: 1em;
-  width: 30px;
-  height: 30px;
-}
-
-body.dark-theme .sidebar {
-  background: linear-gradient(135deg, #333 0%, #555 100%);
-  color: #f5f5f5;
-}
-
-body.dark-theme .sidebar nav ul li a {
-  color: #dbeafe;
-}
-
-body.dark-theme .sidebar .theme-toggle-button {
-  color: #dbeafe;
-}
-
-/*
-* Boton cambio de tema
-*/
-
-.theme-toggle-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.7em;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
-  transition: background-color 0.3s ease;
-  outline: none;
-  margin-left: 20px;
-  margin-right: 30px;
-}
-
-.theme-toggle-button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.theme-toggle-button:focus {
-  box-shadow: 0 0 0 0.2em rgba(0, 0, 0, 0.25);
-}
-
-#theme-icon {
-  line-height: 0;
 }
 
 /*
@@ -530,16 +389,19 @@ body.dark-theme .sidebar .theme-toggle-button {
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .proyecto-card h3 {
   margin-top: 0;
   color: #2c3e50;
   text-align: left;
 }
+
 .descripcion-proyecto {
   color: #555;
   line-height: 1.5;
   margin-bottom: 15px;
 }
+
 .tecnologias-usadas {
   margin-bottom: 10px;
   color: #777;
@@ -613,9 +475,151 @@ body.dark-theme .sidebar .theme-toggle-button {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.sidebar .theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #bbdefb;
+  transition: background-color 0.3s ease;
+  outline: none;
+  margin-top: auto; /* Empujarlo hacia abajo */
+  margin-bottom: 20px;
+}
+
+.sidebar .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .theme-toggle:focus {
+  box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0.25);
+}
+
 @media (max-width: 768px) {
   .sidebar {
     width: 60px;
     margin-top: 205px;
   }
+}
+
+/* 
+* Dark Theme - CORREGIDO PARA BEM
+*/
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Header con BEM */
+.header.dark-theme {
+  background: #303030;
+  color: #e0e0e0;
+}
+
+/* Main */
+main.dark-theme {
+  background: #212121;
+  color: #e0e0e0;
+  background-image: url("../images/jeremy-bishop-8xznAGy4HcY-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+/* Footer */
+footer.dark-theme {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: #f5f5f5;
+}
+
+/* Sidebar */
+.sidebar.dark-theme {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: #f5f5f5;
+}
+
+.sidebar.dark-theme nav ul li a {
+  color: #dbeafe;
+}
+
+.sidebar.dark-theme .theme-toggle {
+  color: #dbeafe;
+}
+
+/* Theme toggle buttons */
+body.dark-theme .header__theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .header__theme-toggle:focus {
+  box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0.25);
+}
+
+body.dark-theme .sidebar .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .sidebar .theme-toggle:focus {
+  box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0.25);
+}
+
+/* Content sections */
+body.dark-theme #sobre-mi .contenedor-imagen p {
+  color: #e0e0e0;
+}
+
+body.dark-theme .content-section {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+body.dark-theme .content-section h2 {
+  color: #f5f5f5;
+}
+
+body.dark-theme .proyecto-card {
+  background-color: #444;
+  color: #e0e0e0;
+  border-color: #666;
+}
+
+body.dark-theme .proyecto-card h3 {
+  color: #f5f5f5;
+}
+
+body.dark-theme .proyecto-card .tecnologias-usadas {
+  color: #ccc;
+}
+
+body.dark-theme .proyecto-card .descripcion-proyecto {
+  color: #ccc;
+}
+
+body.dark-theme a {
+  color: #ffffff;
+}
+
+body.dark-theme a:hover {
+  color: #0062ff;
+}
+
+body.dark-theme .hero-construction {
+  background-color: #121212;
+}
+
+body.dark-theme .hero-construction h1 {
+  color: #ffffff;
+}
+
+body.dark-theme .hero-construction p {
+  color: #e9e9e9;
 }
