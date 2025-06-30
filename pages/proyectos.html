@@ -5,14 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyectos | Nahuel Trassani - Developer</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
+
 <body>
-  <header>
-    <h1>Nombre y Apellido</h1>
-    <nav>
+  <div class="sidebar">
+    <nav class="sidebar__nav">
+      <ul class="sidebar__nav-list">
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#sobre-mi" title="Sobre Mí"><i class="fa-solid fa-user"></i></a></li>
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#habilidades" title="Habilidades"><i class="fa-solid fa-code"></i></a></li>
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#proyectos" title="Proyectos"><i class="fa-solid fa-briefcase"></i></a></li>
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#contacto" title="Contacto"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
     </nav>
+  </div>
+
+  <header class="header">
+    <h1 class="header__title">Nahuel Trassani</h1>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a class="header__nav-link" href="pages/carta-presentacion.html">Sobre Mí
+            <i class="fa-solid fa-arrow-right"></i></a></li>
+        <li class="header__nav-item"><a class="header__nav-link" href="pages/habilidades.html">Habilidades
+            <i class="fa-solid fa-arrow-right"></i></a></li>
+        <li class="header__nav-item"><a class="header__nav-link" href="pages/proyectos.html">Proyectos
+            <i class="fa-solid fa-arrow-right"></i></a></li>
+        <li class="header__nav-item"><a class="header__nav-link" href="pages/contacto.html">Contacto
+            <i class="fa-solid fa-arrow-right"></i></a></li>
+      </ul>
+    </nav>
+    <button class="header__theme-toggle" aria-label="Cambiar tema">
+      <i class="header__theme-icon fa-regular fa-sun"></i>
+    </button>
   </header>
 
   <main id="proyectos-page">

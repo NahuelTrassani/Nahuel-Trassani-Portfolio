@@ -2,356 +2,268 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio | Nahuel Trassani - Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Nahuel Trassani - Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-    <div class="sidebar">
-        <nav class="sidebar__nav">
-            <ul class="sidebar__nav-list">
-                <li class="sidebar__nav-item">
-                    <a class="sidebar__nav-link" href="#sobre-mi" title="Sobre Mí">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                </li>
-                <li class="sidebar__nav-item">
-                    <a class="sidebar__nav-link" href="#habilidades" title="Habilidades">
-                        <i class="fa-solid fa-code"></i>
-                    </a>
-                </li>
-                <li class="sidebar__nav-item">
-                    <a class="sidebar__nav-link" href="#proyectos" title="Proyectos">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </a>
-                </li>
-                <li class="sidebar__nav-item">
-                    <a class="sidef=" #contacto" title="Contacto">
-                        <i class="fa-solid fa-envelobar__nav-link" hrepe"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    <header class="header">
-        <h1 class="header__title">Nahuel Trassani</h1>
-
-        <button class="header__menu-toggle" aria-label="Abrir menú" id="menuToggle">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item">
-                    <a class="header__nav-link" href="#sobre-mi">
-                        Sobre Mí <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a class="header__nav-link" href="#habilidades">
-                        Habilidades <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a class="header__nav-link" href="#proyectos">
-                        Proyectos <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a class="header__nav-link" href="#contacto">
-                        Contacto <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <button class="header__theme-toggle" aria-label="Cambiar tema" id="themeToggle">
-            <i class="header__theme-icon fa-regular fa-sun" id="themeIcon"></i>
-        </button>
-    </header>
-
-    <nav class="header__nav--mobile" id="mobileNav">
-        <ul class="header__nav-list--mobile">
-            <li class="header__nav-item--mobile">
-                <a class="header__nav-link--mobile" href="#sobre-mi">
-                    <i class="fa-solid fa-user"></i>
-                    Sobre Mí
-                </a>
-            </li>
-            <li class="header__nav-item--mobile">
-                <a class="header__nav-link--mobile" href="#habilidades">
-                    <i class="fa-solid fa-code"></i>
-                    Habilidades
-                </a>
-            </li>
-            <li class="header__nav-item--mobile">
-                <a class="header__nav-link--mobile" href="#proyectos">
-                    <i class="fa-solid fa-briefcase"></i>
-                    Proyectos
-                </a>
-            </li>
-            <li class="header__nav-item--mobile">
-                <a class="header__nav-link--mobile" href="#contacto">
-                    <i class="fa-solid fa-envelope"></i>
-                    Contacto
-                </a>
-            </li>
-        </ul>
+  <div class="sidebar">
+    <nav class="sidebar__nav">
+      <ul class="sidebar__nav-list">
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#sobre-mi" title="Sobre Mí"><i
+              class="fa-solid fa-user"></i></a></li>
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#habilidades" title="Habilidades"><i
+              class="fa-solid fa-code"></i></a></li>
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#proyectos" title="Proyectos"><i
+              class="fa-solid fa-briefcase"></i></a></li>
+        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#contacto" title="Contacto"><i
+              class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+      <button class="sidebar__theme-toggle" aria-label="Cambiar tema">
+        <i class="sidebar__theme-icon fa-regular fa-sun"></i>
+      </button>
     </nav>
+  </div>
 
-    <main>
-        <section class="hero">
-            <div class="hero__content">
-                <h2 class="hero__title">Desarrollador Full Stack</h2>
-                <p class="hero__text">Especializado en crear experiencias web modernas y eficientes</p>
-                <a href="#proyectos" class="hero__button">Ver Proyectos</a>
+  <header class="header">
+    <h1 class="header__title">Nahuel Trassani</h1>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a class="header__nav-link" href="pages/carta-presentacion.html">Sobre Mí
+            <i class="fa-solid fa-arrow-right"></i></a></li>
+        <li class="header__nav-item"><a class="header__nav-link" href="pages/habilidades.html">Habilidades
+            <i class="fa-solid fa-arrow-right"></i></a></li>
+        <li class="header__nav-item"><a class="header__nav-link" href="pages/proyectos.html">Proyectos
+            <i class="fa-solid fa-arrow-right"></i></a></li>
+        <li class="header__nav-item"><a class="header__nav-link" href="pages/contacto.html">Contacto
+            <i class="fa-solid fa-arrow-right"></i></a></li>
+      </ul>
+    </nav>
+    <button class="header__theme-toggle" aria-label="Cambiar tema">
+      <i class="header__theme-icon fa-regular fa-sun"></i>
+    </button>
+  </header>
+
+  <main class="main">
+    <section id="hero" class="hero">
+      <div class="hero__content">
+        <h2 class="hero__title">¡Hola! Soy Nahuel</h2>
+        <p class="hero__subtitle">Un apasionado del desarrollo web.</p>
+        <a href="#proyectos" class="hero__button">Ver mis proyectos</a>
+      </div>
+      <div class="hero__construction">
+        <h1 class="hero__construction-title">Página en Construcción</h1>
+        <p class="hero__construction-text">Estamos trabajando para traerte algo increíble. ¡Vuelve pronto!</p>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="content-section">
+      <div class="content-section__inner">
+        <h2 class="content-section__title">Sobre Mí</h2>
+        <figure class="image-container">
+          <img class="image-container__img" src="images/messi-world-cup.jpg" alt="Lionel Messi levantando la Copa del Mundo FIFA 2022" />
+          <figcaption class="image-container__caption">
+            ¡Qué momento histórico! El capitán argentino conquistando el mundo.
+          </figcaption>
+        </figure>
+
+        <p class="content-section__text">¡Hola! Soy Nahuel Trassani, un apasionado del desarrollo web y la tecnología. Me encanta crear soluciones
+          innovadoras y eficientes que mejoren la experiencia del usuario. Tengo experiencia en HTML, CSS, JavaScript y
+          Genexus, y siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. En mi tiempo libre,
+          disfruto de la lectura, el deporte y explorar nuevas tendencias en el mundo digital.</p>
+        <p class="content-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt libero id nisl euismod, eu maximus
+          lacus luctus. Donec tincidunt ligula non risus dignissim, a viverra nulla tincidunt. In hac habitasse platea
+          dictumst. Sed eleifend justo vitae sapien faucibus, non auctor dolor semper. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat.</p>
+        <p class="content-section__text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="content-section__text">Más texto, más texto, más texto...</p>
+      </div>
+    </section>
+
+    <section id="habilidades" class="content-section">
+      <div class="content-section__inner">
+        <h2 class="content-section__title">Habilidades</h2>
+        <ul class="skills__list">
+          <li class="skills__item">HTML</li>
+          <li class="skills__item">CSS</li>
+          <li class="skills__item">JavaScript</li>
+          <li class="skills__item">Genexus</li>
+          <li class="skills__item">Docker</li>
+          <li class="skills__item">Tomcat</li>
+          <li class="skills__item">IIS</li>
+          <li class="skills__item">PostgreSQL</li>
+          <li class="skills__item">SQL Server</li>
+          <li class="skills__item">MySQL</li>
+          <li class="skills__item">GitHub</li>
+          <li class="skills__item">Node.js</li>
+          <li class="skills__item">Express.js</li>
+          <li class="skills__item">React</li>
+          <li class="skills__item">JSON</li>
+          <li class="skills__item">RESTful APIs</li>
+          <li class="skills__item">Responsive Web Design</li>
+          <li class="skills__item">Agile Methodologies</li>
+          <li class="skills__item">Jenkins</li>
+          <li class="skills__item">Diseño Responsivo</li>
+        </ul>
+        <p class="content-section__text">Se detallará más próximamente</p>
+      </div>
+    </section>
+
+    <section id="proyectos" class="content-section">
+      <div class="content-section__inner">
+        <h2 class="content-section__title">Proyectos Destacados</h2>
+        <div class="projects__inner">
+          <div class="projects__card">
+            <h3 class="projects__card-title">Proyecto 1</h3>
+            <p class="projects__card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="projects__tech">
+              <div class="projects__tech-title">Tecnologías:</div>
+              <ul class="projects__tech-list">
+                <li class="projects__tech-item">HTML</li>
+                <li class="projects__tech-item">CSS</li>
+                <li class="projects__tech-item">JavaScript</li>
+              </ul>
             </div>
+          </div>
 
-            <div class="hero__construction">
-                <h3 class="hero__construction-title">🚧 Sitio en Construcción 🚧</h3>
-                <p class="hero__construction-text">Estoy trabajando en crear algo increíble para ti. ¡Vuelve pronto!</p>
+          <div class="projects__card">
+            <h3 class="projects__card-title">Proyecto 2</h3>
+            <p class="projects__card-description">Ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
+            <div class="projects__tech">
+              <div class="projects__tech-title">Tecnologías:</div>
+              <ul class="projects__tech-list">
+                <li class="projects__tech-item">Genexus</li>
+                <li class="projects__tech-item">Docker</li>
+                <li class="projects__tech-item">Tomcat</li>
+              </ul>
             </div>
-        </section>
+          </div>
 
-        <section id="sobre-mi" class="content-section">
-            <div class="content-section__inner">
-                <h2 class="content-section__title">Sobre Mí</h2>
-
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/400x300" alt="Nahuel Trassani" class="image-container__img">
-                    <p class="image-container__caption">Desarrollador apasionado por la tecnología</p>
-                </div>
-
-                <p class="content-section__paragraph">
-                    Soy un desarrollador full stack con experiencia en tecnologías modernas. Me especializo en crear
-                    aplicaciones web robustas y escalables, siempre enfocándome en la experiencia del usuario y las
-                    mejores prácticas de desarrollo.
-                </p>
-
-                <p class="content-section__paragraph">
-                    Mi pasión por la programación me lleva a estar constantemente aprendiendo nuevas tecnologías y
-                    metodologías. Disfruto trabajando en equipo y enfrentando desafíos técnicos complejos.
-                </p>
-
-                <p class="content-section__paragraph">
-                    Cuando no estoy programando, me gusta mantenerme actualizado con las últimas tendencias en
-                    desarrollo web, contribuir a proyectos open source y compartir conocimientos con la comunidad de
-                    desarrolladores.
-                </p>
+          <div class="projects__card">
+            <h3 class="projects__card-title">Proyecto 3</h3>
+            <p class="projects__card-description">Erat velit scelerisque in dictum non consectetur tristique.</p>
+            <div class="projects__tech">
+              <div class="projects__tech-title">Tecnologías:</div>
+              <ul class="projects__tech-list">
+                <li class="projects__tech-item">Genexus</li>
+                <li class="projects__tech-item">Docker</li>
+                <li class="projects__tech-item">JSON</li>
+                <li class="projects__tech-item">RESTful APIs</li>
+              </ul>
             </div>
-        </section>
+          </div>
 
-        <section id="habilidades" class="content-section">
-            <div class="content-section__inner">
-                <h2 class="content-section__title">Habilidades Técnicas</h2>
-
-                <p class="content-section__paragraph">
-                    A lo largo de mi carrera como desarrollador, he trabajado con diversas tecnologías y herramientas.
-                    Aquí están las principales áreas en las que me especializo:
-                </p>
-
-                <ul class="skills__list">
-                    <li class="skills__item">JavaScript</li>
-                    <li class="skills__item">TypeScript</li>
-                    <li class="skills__item">React</li>
-                    <li class="skills__item">Node.js</li>
-                    <li class="skills__item">Express</li>
-                    <li class="skills__item">MongoDB</li>
-                    <li class="skills__item">PostgreSQL</li>
-                    <li class="skills__item">HTML5</li>
-                    <li class="skills__item">CSS3</li>
-                    <li class="skills__item">Sass</li>
-                    <li class="skills__item">Git</li>
-                    <li class="skills__item">Docker</li>
-                    <li class="skills__item">AWS</li>
-                    <li class="skills__item">Python</li>
-                    <li class="skills__item">Next.js</li>
-                </ul>
-
-                <p class="content-section__paragraph">
-                    Además de estas tecnologías, tengo experiencia trabajando con metodologías ágiles, control de
-                    versiones con Git, y deployment en diversas plataformas cloud.
-                </p>
+          <div class="projects__card">
+            <h3 class="projects__card-title">Proyecto 4</h3>
+            <p class="projects__card-description">A diam maecenas sed enim ut sem viverra aliquet eget.</p>
+            <div class="projects__tech">
+              <div class="projects__tech-title">Tecnologías:</div>
+              <ul class="projects__tech-list">
+                <li class="projects__tech-item">GitHub</li>
+                <li class="projects__tech-item">Node.js</li>
+                <li class="projects__tech-item">Express.js</li>
+              </ul>
             </div>
-        </section>
+          </div>
 
-        <section id="proyectos" class="content-section">
-            <div class="content-section__inner">
-                <h2 class="content-section__title">Proyectos Destacados</h2>
-
-                <div class="content-section__inner--projects">
-                    <article class="project-card">
-                        <h3 class="project-card__title">E-Commerce Platform</h3>
-                        <p class="project-card__description">
-                            Plataforma de comercio electrónico completa con sistema de pagos, gestión de inventario y
-                            panel de administración. Desarrollada con tecnologías modernas para garantizar escalabilidad
-                            y performance.
-                        </p>
-                        <p class="project-card__technologies">Tecnologías utilizadas:</p>
-                        <ul class="project-card__tech-list">
-                            <li class="project-card__tech-item">React</li>
-                            <li class="project-card__tech-item">Node.js</li>
-                            <li class="project-card__tech-item">MongoDB</li>
-                            <li class="project-card__tech-item">Stripe</li>
-                        </ul>
-                    </article>
-
-                    <article class="project-card">
-                        <h3 class="project-card__title">Task Management App</h3>
-                        <p class="project-card__description">
-                            Aplicación de gestión de tareas con funcionalidades avanzadas como colaboración en tiempo
-                            real, notificaciones push y sincronización multiplataforma.
-                        </p>
-                        <p class="project-card__technologies">Tecnologías utilizadas:</p>
-                        <ul class="project-card__tech-list">
-                            <li class="project-card__tech-item">Vue.js</li>
-                            <li class="project-card__tech-item">Express</li>
-                            <li class="project-card__tech-item">Socket.io</li>
-                            <li class="project-card__tech-item">PostgreSQL</li>
-                        </ul>
-                    </article>
-
-                    <article class="project-card">
-                        <h3 class="project-card__title">Weather Dashboard</h3>
-                        <p class="project-card__description">
-                            Dashboard meteorológico interactivo con visualizaciones de datos en tiempo real, pronósticos
-                            detallados y mapas interactivos. Integración con múltiples APIs meteorológicas.
-                        </p>
-                        <p class="project-card__technologies">Tecnologías utilizadas:</p>
-                        <ul class="project-card__tech-list">
-                            <li class="project-card__tech-item">JavaScript</li>
-                            <li class="project-card__tech-item">D3.js</li>
-                            <li class="project-card__tech-item">Chart.js</li>
-                            <li class="project-card__tech-item">OpenWeather API</li>
-                        </ul>
-                    </article>
-
-                    <article class="project-card">
-                        <h3 class="project-card__title">Blog Personal</h3>
-                        <p class="project-card__description">
-                            Blog personal desarrollado con tecnologías JAMstack, optimizado para SEO y performance.
-                            Incluye sistema de comentarios, búsqueda avanzada y modo oscuro.
-                        </p>
-                        <p class="project-card__technologies">Tecnologías utilizadas:</p>
-                        <ul class="project-card__tech-list">
-                            <li class="project-card__tech-item">Next.js</li>
-                            <li class="project-card__tech-item">MDX</li>
-                            <li class="project-card__tech-item">Tailwind CSS</li>
-                            <li class="project-card__tech-item">Vercel</li>
-                        </ul>
-                    </article>
-
-                    <article class="project-card">
-                        <h3 class="project-card__title">API REST</h3>
-                        <p class="project-card__description">
-                            API RESTful robusta para gestión de usuarios y contenido, con autenticación JWT, rate
-                            limiting, documentación automática y testing completo.
-                        </p>
-                        <p class="project-card__technologies">Tecnologías utilizadas:</p>
-                        <ul class="project-card__tech-list">
-                            <li class="project-card__tech-item">Node.js</li>
-                            <li class="project-card__tech-item">Express</li>
-                            <li class="project-card__tech-item">JWT</li>
-                            <li class="project-card__tech-item">Swagger</li>
-                        </ul>
-                    </article>
-
-                    <article class="project-card">
-                        <h3 class="project-card__title">Data Visualization</h3>
-                        <p class="project-card__description">
-                            Herramienta de visualización de datos interactiva para análisis de métricas de negocio.
-                            Permite crear dashboards personalizados con múltiples tipos de gráficos y filtros dinámicos.
-                        </p>
-                        <p class="project-card__technologies">Tecnologías utilizadas:</p>
-                        <ul class="project-card__tech-list">
-                            <li class="project-card__tech-item">React</li>
-                            <li class="project-card__tech-item">D3.js</li>
-                            <li class="project-card__tech-item">Python</li>
-                            <li class="project-card__tech-item">Flask</li>
-                        </ul>
-                    </article>
-                </div>
+          <div class="projects__card">
+            <h3 class="projects__card-title">Proyecto 5</h3>
+            <p class="projects__card-description">Sit amet dictum sit amet justo donec enim diam vulputate.</p>
+            <div class="projects__tech">
+              <div class="projects__tech-title">Tecnologías:</div>
+              <ul class="projects__tech-list">
+                <li class="projects__tech-item">JavaScript</li>
+                <li class="projects__tech-item">Genexus</li>
+                <li class="projects__tech-item">Docker</li>
+                <li class="projects__tech-item">IIS</li>
+                <li class="projects__tech-item">PostgreSQL</li>
+              </ul>
             </div>
-        </section>
+          </div>
 
-        <section id="contacto" class="content-section">
-            <div class="content-section__inner">
-                <h2 class="content-section__title">Contacto</h2>
-
-                <p class="content-section__paragraph">
-                    ¿Tienes un proyecto en mente o quieres colaborar? Me encantaría saber de ti. Puedes contactarme a
-                    través de cualquiera de estos medios:
-                </p>
-
-                <ul class="contact__social-list">
-                    <li class="contact__social-item">
-                        <i class="fa-solid fa-envelope contact__social-icon"></i>
-                        <a href="mailto:nahuel.trassani@email.com" class="link">nahuel.trassani@email.com</a>
-                    </li>
-                    <li class="contact__social-item">
-                        <i class="fa-brands fa-linkedin contact__social-icon"></i>
-                        <a href="https://linkedin.com/in/nahueltrassani" class="link">LinkedIn</a>
-                    </li>
-                    <li class="contact__social-item">
-                        <i class="fa-brands fa-github contact__social-icon"></i>
-                        <a href="https://github.com/nahueltrassani" class="link">GitHub</a>
-                    </li>
-                    <li class="contact__social-item">
-                        <i class="fa-brands fa-twitter contact__social-icon"></i>
-                        <a href="https://twitter.com/nahueltrassani" class="link">Twitter</a>
-                    </li>
-                </ul>
-
-                <p class="content-section__paragraph">
-                    Siempre estoy abierto a nuevas oportunidades y desafíos. Si crees que podemos trabajar juntos o
-                    simplemente quieres charlar sobre tecnología, no dudes en contactarme.
-                </p>
+          <div class="projects__card">
+            <h3 class="projects__card-title">Proyecto 6</h3>
+            <p class="projects__card-description">Faucibus nisl tincidunt eget nullam non nisi est sit amet.</p>
+            <div class="projects__tech">
+              <div class="projects__tech-title">Tecnologías:</div>
+              <ul class="projects__tech-list">
+                <li class="projects__tech-item">SQL Server</li>
+                <li class="projects__tech-item">CSS</li>
+                <li class="projects__tech-item">Tomcat</li>
+              </ul>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer__section">
-            <h3 class="footer__title">Sigamos en contacto</h3>
-            <ul class="footer__social-links">
-                <li class="footer__social-item">
-                    <a href="mailto:nahuel.trassani@email.com" class="footer__social-link">
-                        <i class="fa-solid fa-envelope footer__social-icon"></i>
-                        Email
-                    </a>
-                </li>
-                <li class="footer__social-item">
-                    <a href="https://linkedin.com/in/nahueltrassani" class="footer__social-link">
-                        <i class="fa-brands fa-linkedin footer__social-icon"></i>
-                        LinkedIn
-                    </a>
-                </li>
-                <li class="footer__social-item">
-                    <a href="https://github.com/nahueltrassani" class="footer__social-link">
-                        <i class="fa-brands fa-github footer__social-icon"></i>
-                        GitHub
-                    </a>
-                </li>
-                <li class="footer__social-item">
-                    <a href="https://twitter.com/nahueltrassani" class="footer__social-link">
-                        <i class="fa-brands fa-twitter footer__social-icon"></i>
-                        Twitter
-                    </a>
-                </li>
-            </ul>
+          </div>
         </div>
-    </footer>
-    <script src="js/script.js"></script>
+      </div>
+    </section>
+
+    <section id="contacto" class="content-section">
+      <div class="content-section__inner">
+        <h2 class="content-section__title">Contacto</h2>
+        <p class="content-section__text">¿Te gustaría contactarme? Puedes hacerlo a través de:</p>
+        <p class="content-section__text"><a class="content-section__link" href="mailto:mn.trassani@gmail.com">mn.trassani@gmail.com</a></p>
+        <br>
+        <p class="content-section__text">O puedes seguirme en mis redes sociales:</p>
+        <ul class="content-section__list">
+          <li class="content-section__list-item">
+            <a class="content-section__link--social" href="#contacto">
+              <i class="content-section__icon fa-brands fa-linkedin"></i>LinkedIn
+            </a>
+          </li>
+          <li class="content-section__list-item">
+            <a class="content-section__link--social" href="#contacto">
+              <i class="content-section__icon fa-brands fa-github"></i>GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__section">
+      <h3 class="footer__section-title">Redes sociales</h3>
+      <ul class="footer__social-links">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#redes" aria-label="Facebook" title="Facebook" rel="noopener noreferrer">
+            <i class="footer__social-icon fa-brands fa-facebook"></i>Facebook
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#redes" aria-label="Twitter" title="Twitter" rel="noopener noreferrer">
+            <i class="footer__social-icon fa-brands fa-twitter"></i>Twitter
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#redes" aria-label="Instagram" title="Instagram" rel="noopener noreferrer">
+            <i class="footer__social-icon fa-brands fa-instagram"></i>Instagram
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#redes" aria-label="Discord" title="Discord" rel="noopener noreferrer">
+            <i class="footer__social-icon fa-brands fa-discord"></i>Discord
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
