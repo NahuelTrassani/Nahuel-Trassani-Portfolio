@@ -866,7 +866,7 @@ main {
   .footer {
     padding: 1.5rem;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
 
   .footer__section {
