@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const themeToggleButtons = document.querySelectorAll(".header__theme-toggle, .sidebar__theme-toggle"); // Incluir ambos botones
+  const sidebarThemeToggle = document.querySelector(".sidebar__theme-toggle");
+  const dropdownThemeToggle = document.querySelector(".dropdown__theme-item");
+
   const body = document.body;
   const header = document.querySelector(".header");
   const main = document.querySelector("main");
   const footer = document.querySelector(".footer");
   const sidebar = document.querySelector(".sidebar");
-  
+
   // Seleccionar todos los elementos que necesitan tema oscuro
   const contentSections = document.querySelectorAll(".content-section");
   const projectCards = document.querySelectorAll(".projects__card");
@@ -13,22 +15,63 @@ document.addEventListener("DOMContentLoaded", function () {
   const heroSection = document.querySelector(".hero");
 
   function updateIcon() {
-    themeToggleButtons.forEach((button) => {
-      const themeIcon = button.querySelector(".header__theme-icon, .sidebar__theme-icon");
-      if (themeIcon) {
+    // Actualizar ícono del sidebar
+    if (sidebarThemeToggle) {
+      const sidebarThemeIcon = sidebarThemeToggle.querySelector(
+        ".sidebar__theme-icon"
+      );
+      if (sidebarThemeIcon) {
         if (body.classList.contains("body--dark-theme")) {
-          themeIcon.classList.remove("fa-sun");
-          themeIcon.classList.add("fa-moon");
-          button.setAttribute("aria-label", "Cambiar a tema claro");
-          button.setAttribute("title", "Cambiar a tema claro");
+          sidebarThemeIcon.classList.remove("fa-sun");
+          sidebarThemeIcon.classList.add("fa-moon");
+          sidebarThemeToggle.setAttribute("aria-label", "Cambiar a tema claro");
+          sidebarThemeToggle.setAttribute("title", "Cambiar a tema claro");
         } else {
-          themeIcon.classList.remove("fa-moon");
-          themeIcon.classList.add("fa-sun");
-          button.setAttribute("aria-label", "Cambiar a tema oscuro");
-          button.setAttribute("title", "Cambiar a tema oscuro");
+          sidebarThemeIcon.classList.remove("fa-moon");
+          sidebarThemeIcon.classList.add("fa-sun");
+          sidebarThemeToggle.setAttribute(
+            "aria-label",
+            "Cambiar a tema oscuro"
+          );
+          sidebarThemeToggle.setAttribute("title", "Cambiar a tema oscuro");
         }
       }
-    });
+    }
+
+    // Actualizar ícono del dropdown
+    if (dropdownThemeToggle) {
+      const dropdownThemeIcon =
+        dropdownThemeToggle.querySelector(".dropdown__icon");
+      const dropdownTitle =
+        dropdownThemeToggle.querySelector(".dropdown__title");
+      const dropdownDescription = dropdownThemeToggle.querySelector(
+        ".dropdown__description"
+      );
+
+      if (dropdownThemeIcon) {
+        if (body.classList.contains("body--dark-theme")) {
+          dropdownThemeIcon.classList.remove("fa-sun");
+          dropdownThemeIcon.classList.add("fa-moon");
+          if (dropdownTitle) dropdownTitle.textContent = "Tema Claro";
+          if (dropdownDescription)
+            dropdownDescription.textContent = "Cambiar a modo claro";
+          dropdownThemeToggle.setAttribute(
+            "aria-label",
+            "Cambiar a tema claro"
+          );
+        } else {
+          dropdownThemeIcon.classList.remove("fa-moon");
+          dropdownThemeIcon.classList.add("fa-sun");
+          if (dropdownTitle) dropdownTitle.textContent = "Tema Oscuro";
+          if (dropdownDescription)
+            dropdownDescription.textContent = "Cambiar a modo oscuro";
+          dropdownThemeToggle.setAttribute(
+            "aria-label",
+            "Cambiar a tema oscuro"
+          );
+        }
+      }
+    }
   }
 
   function toggleDarkTheme() {
@@ -56,17 +99,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Toggle content sections theme
-    contentSections.forEach(section => {
+    contentSections.forEach((section) => {
       section.classList.toggle("content-section--dark-theme");
     });
 
     // Toggle project cards theme
-    projectCards.forEach(card => {
+    projectCards.forEach((card) => {
       card.classList.toggle("projects__card--dark-theme");
     });
 
     // Toggle skills items theme
-    skillsItems.forEach(item => {
+    skillsItems.forEach((item) => {
       item.classList.toggle("skills__item--dark-theme");
     });
 
@@ -84,9 +127,24 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
-  themeToggleButtons.forEach((themeToggle) => {
-    themeToggle.addEventListener("click", toggleDarkTheme);
-  });
+  // Event listeners para los botones de tema
+  if (sidebarThemeToggle) {
+    sidebarThemeToggle.addEventListener("click", toggleDarkTheme);
+  }
+
+  if (dropdownThemeToggle) {
+    dropdownThemeToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleDarkTheme();
+
+      // Cerrar el dropdown después de cambiar el tema
+      const dropdown = document.querySelector(".dropdown");
+      if (dropdown) {
+        dropdown.classList.remove("dropdown--show");
+      }
+    });
+  }
 
   // Cargar tema guardado al inicializar la página
   const savedTheme = localStorage.getItem("theme");
@@ -110,15 +168,15 @@ document.addEventListener("DOMContentLoaded", function () {
       sidebar.classList.add("sidebar--dark-theme");
     }
 
-    contentSections.forEach(section => {
+    contentSections.forEach((section) => {
       section.classList.add("content-section--dark-theme");
     });
 
-    projectCards.forEach(card => {
+    projectCards.forEach((card) => {
       card.classList.add("projects__card--dark-theme");
     });
 
-    skillsItems.forEach(item => {
+    skillsItems.forEach((item) => {
       item.classList.add("skills__item--dark-theme");
     });
 
@@ -141,5 +199,59 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         block: "start",
       });
     }
+  });
+});
+
+// Dropdown functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownToggles = document.querySelectorAll(".dropdown__toggle");
+
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const dropdown = this.closest(".dropdown");
+      const dropdownId = this.getAttribute("data-dropdown");
+
+      // Cerrar otros dropdowns
+      document.querySelectorAll(".dropdown").forEach((otherDropdown) => {
+        if (otherDropdown !== dropdown) {
+          otherDropdown.classList.remove("dropdown--show");
+        }
+      });
+
+      // Toggle current dropdown
+      dropdown.classList.toggle("dropdown--show");
+    });
+  });
+
+  // Cerrar dropdown al hacer click fuera
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown").forEach((dropdown) => {
+        dropdown.classList.remove("dropdown--show");
+      });
+    }
+  });
+
+  // Cerrar dropdown con Escape
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".dropdown").forEach((dropdown) => {
+        dropdown.classList.remove("dropdown--show");
+      });
+    }
+  });
+
+  // Manejar clicks en items del dropdown (excepto el tema que ya está manejado arriba)
+  document.querySelectorAll(".dropdown__item:not(.dropdown__theme-item)").forEach((item) => {
+    item.addEventListener("click", function (e) {
+      // Cerrar el dropdown al hacer click en un item de navegación
+      const dropdown = this.closest(".dropdown");
+      if (dropdown) {
+        dropdown.classList.remove("dropdown--show");
+      }
+    });
   });
 });

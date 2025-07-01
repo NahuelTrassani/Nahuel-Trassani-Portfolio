@@ -2,114 +2,347 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto | Nahuel Trassani - Developer</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 
-<body>
-  <div class="sidebar">
-    <nav class="sidebar__nav">
-      <ul class="sidebar__nav-list">
-        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#sobre-mi" title="Sobre Mí"><i
-              class="fa-solid fa-user"></i></a></li>
-        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#habilidades" title="Habilidades"><i
-              class="fa-solid fa-code"></i></a></li>
-        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#proyectos" title="Proyectos"><i
-              class="fa-solid fa-briefcase"></i></a></li>
-        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#contacto" title="Contacto"><i
-              class="fa-solid fa-envelope"></i></a></li>
-      </ul>
-    </nav>
-  </div>
+<body class="bg-light">
 
   <header class="header">
     <h1 class="header__title">Nahuel Trassani</h1>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li class="header__nav-item"><a class="header__nav-link" href="pages/carta-presentacion.html">Sobre Mí
+        <li class="header__nav-item"><a class="header__nav-link" href="../index.html">Inicio
             <i class="fa-solid fa-arrow-right"></i></a></li>
-        <li class="header__nav-item"><a class="header__nav-link" href="pages/habilidades.html">Habilidades
+        <li class="header__nav-item"><a class="header__nav-link" href="../pages/carta-presentacion.html">Sobre Mí
             <i class="fa-solid fa-arrow-right"></i></a></li>
-        <li class="header__nav-item"><a class="header__nav-link" href="pages/proyectos.html">Proyectos
+        <li class="header__nav-item"><a class="header__nav-link" href="../pages/habilidades.html">Habilidades
             <i class="fa-solid fa-arrow-right"></i></a></li>
-        <li class="header__nav-item"><a class="header__nav-link" href="pages/contacto.html">Contacto
+        <li class="header__nav-item"><a class="header__nav-link" href="../pages/proyectos.html">Proyectos
+            <i class="fa-solid fa-arrow-right"></i></a></li>
+        <li class="header__nav-item"><a class="header__nav-link" href="../pages/contacto.html">Contacto
             <i class="fa-solid fa-arrow-right"></i></a></li>
       </ul>
     </nav>
-    <button class="header__theme-toggle" aria-label="Cambiar tema">
-      <i class="header__theme-icon fa-regular fa-sun"></i>
-    </button>
+
+    <div class="header-content">
+      <div class="dropdown">
+        <button class="dropdown__toggle" type="button">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <div class="dropdown__menu dropdown__menu--wide">
+          <a class="dropdown__item" href="../index.html">
+            <i class="dropdown__icon fas fa-user"></i>
+            <div class="dropdown__content">
+              <div class="dropdown__title">Inicio</div>
+              <div class="dropdown__description">Volver a la página principal</div>
+            </div>
+          </a>
+
+          <a class="dropdown__item" href="../pages/carta-presentacion.html">
+            <i class="dropdown__icon fas fa-user"></i>
+            <div class="dropdown__content">
+              <div class="dropdown__title">Sobre Mí</div>
+              <div class="dropdown__description">Conoce mi historia y experiencia</div>
+            </div>
+          </a>
+
+          <a class="dropdown__item" href="../pages/habilidades.html">
+            <i class="dropdown__icon fas fa-code"></i>
+            <div class="dropdown__content">
+              <div class="dropdown__title">Habilidades</div>
+              <div class="dropdown__description">Tecnologías que domino</div>
+            </div>
+          </a>
+
+          <a class="dropdown__item" href="../pages/proyectos.html">
+            <i class="dropdown__icon fas fa-briefcase"></i>
+            <div class="dropdown__content">
+              <div class="dropdown__title">Proyectos</div>
+              <div class="dropdown__description">Mis trabajos destacados</div>
+            </div>
+          </a>
+
+          <div class="dropdown__divider"></div>
+
+          <button class="dropdown__theme-item" id="mobileThemeToggle" aria-label="Cambiar tema">
+            <i class="dropdown__icon fa-regular fa-sun"></i>
+            <div class="dropdown__content">
+              <div class=" dropdown__title">Cambiar Tema</div>
+              <div class="dropdown__description">Modo claro/oscuro</div>
+            </div>
+          </button>
+
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!--    
-        <p>O simplemente puedes dejarme un mensaje a través del siguiente formulario:</p>
-
-        <form action="mailto:" method="post" enctype="text/plain">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required readonly>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required readonly>
-
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required readonly></textarea>
 
 
-
-          <button type="submit">Enviar</button>
-          -->
-  <!-- crea una section para un formulario  de contacto -->
-  <ul>
-    <li><a href="carta-presentacion.html">Sobre Mí</a></li>
-    <li><a href="habilidades.html">Habilidades</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-  </nav>
-  </header>
-
-  <main id="contacto-page">
-    <section class="content-section">
-      <h2>Título de la página (form contacto)</h2>
-      <form action="#" method="#">
-        <div>
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre">
+  <!-- Main Content -->
+  <main class="pt-5 mt-4">
+    <div class="container my-5">
+      <!-- Back Button -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <a href="../index.html" class="btn btn-secondary">
+            <i class="fas fa-arrow-left me-2"></i>Volver al inicio
+          </a>
         </div>
-        <div>
-          <label for="correo">Correo electronico:</label>
-          <input type="email" id="correo" name="correo">
+      </div>
+
+      <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="card shadow">
+            <!-- Card Header -->
+            <div class="card-header bg-primary text-white text-center py-4">
+              <h2 class="card-title mb-2">
+                <i class="fas fa-envelope me-3"></i>Contacto
+              </h2>
+              <p class="card-text mb-0">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+            </div>
+
+            <!-- Card Body -->
+            <div class="card-body p-4">
+              <form novalidate class="needs-validation">
+                <div class="row g-3">
+                  <!-- First Name -->
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label fw-semibold">
+                      <i class="fas fa-user me-2 text-primary"></i>Nombre *
+                    </label>
+                    <input type="text" class="form-control" id="firstName" required>
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu nombre.
+                    </div>
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label fw-semibold">
+                      <i class="fas fa-user me-2 text-primary"></i>Apellido *
+                    </label>
+                    <input type="text" class="form-control" id="lastName" required>
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu apellido.
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-12">
+                    <label for="email" class="form-label fw-semibold">
+                      <i class="fas fa-envelope me-2 text-primary"></i>Correo Electrónico *
+                    </label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">
+                      Por favor, ingresa un correo electrónico válido.
+                    </div>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="col-12">
+                    <label for="phone" class="form-label fw-semibold">
+                      <i class="fas fa-phone me-2 text-primary"></i>Teléfono
+                    </label>
+                    <input type="tel" class="form-control" id="phone">
+                  </div>
+
+                  <!-- Company -->
+                  <div class="col-12">
+                    <label for="company" class="form-label fw-semibold">
+                      <i class="fas fa-building me-2 text-primary"></i>Empresa/Organización
+                    </label>
+                    <input type="text" class="form-control" id="company">
+                  </div>
+
+                  <!-- Subject -->
+                  <div class="col-12">
+                    <label for="subject" class="form-label fw-semibold">
+                      <i class="fas fa-tag me-2 text-primary"></i>Asunto *
+                    </label>
+                    <select class="form-select" id="subject" required>
+                      <option value="">Selecciona un asunto</option>
+                      <option value="proyecto">Proyecto Web</option>
+                      <option value="consultoria">Consultoría</option>
+                      <option value="colaboracion">Colaboración</option>
+                      <option value="empleo">Oportunidad de Empleo</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecciona un asunto.
+                    </div>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="col-12">
+                    <label for="message" class="form-label fw-semibold">
+                      <i class="fas fa-comment me-2 text-primary"></i>Mensaje *
+                    </label>
+                    <textarea class="form-control" id="message" rows="6" required
+                      placeholder="Cuéntame sobre tu proyecto o consulta..."></textarea>
+                    <div class="invalid-feedback">
+                      Por favor, escribe tu mensaje.
+                    </div>
+                  </div>
+
+                  <!-- Privacy Checkbox -->
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="privacy" required>
+                      <label class="form-check-label" for="privacy">
+                        Acepto el tratamiento de mis datos personales según la política de privacidad *
+                      </label>
+                      <div class="invalid-feedback">
+                        Debes aceptar la política de privacidad.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg px-4">
+                      <i class="fas fa-paper-plane me-2"></i>
+                      Enviar Mensaje
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <div>
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+
+        <!-- Contact Information -->
+        <div class="col-lg-4">
+          <div class="card shadow h-100">
+            <div class="card-header bg-secondary text-white">
+              <h3 class="card-title mb-0">
+                <i class="fas fa-address-card me-2"></i>Información de Contacto
+              </h3>
+            </div>
+
+            <div class="card-body">
+              <!-- Email -->
+              <div class="d-flex align-items-center mb-3 p-2 bg-light rounded">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px;">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </div>
+                <div class="ms-3">
+                  <strong class="d-block">Email</strong>
+                  <a href="mailto:mn.trassani@gmail.com" class="text-decoration-none">
+                    mn.trassani@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="d-flex align-items-center mb-3 p-2 bg-light rounded">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px;">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                </div>
+                <div class="ms-3">
+                  <strong class="d-block">Ubicación</strong>
+                  <span class="text-muted">General Roca, Río Negro, Argentina</span>
+                </div>
+              </div>
+
+              <!-- Response Time -->
+              <div class="d-flex align-items-center mb-4 p-2 bg-light rounded">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px;">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                </div>
+                <div class="ms-3">
+                  <strong class="d-block">Horario de Respuesta</strong>
+                  <span class="text-muted">24-48 horas</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <!-- Social Links -->
+              <h4 class="mb-3">
+                <i class="fas fa-share-alt me-2"></i>Sígueme en:
+              </h4>
+
+              <div class="d-grid gap-2">
+                <a href="#" class="btn btn-outline-primary text-start">
+                  <i class="fab fa-linkedin me-2"></i>LinkedIn
+                </a>
+                <a href="#" class="btn btn-outline-dark text-start">
+                  <i class="fab fa-github me-2"></i>GitHub
+                </a>
+                <a href="#" class="btn btn-outline-info text-start">
+                  <i class="fab fa-twitter me-2"></i>Twitter
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>FOOTER</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-auto text-center">
+          <h5 class="mb-3">Redes Sociales</h5>
+          <div class="d-flex justify-content-center gap-3">
+            <a class="btn btn-outline-light btn-sm" href="#" aria-label="LinkedIn">
+              <i class="fab fa-linkedin me-1"></i>LinkedIn
+            </a>
+            <a class="btn btn-outline-light btn-sm" href="#" aria-label="GitHub">
+              <i class="fab fa-github me-1"></i>GitHub
+            </a>
+            <a class="btn btn-outline-light btn-sm" href="#" aria-label="Twitter">
+              <i class="fab fa-twitter me-1"></i>Twitter
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
-  <style>
-    a button {
-      background-color: #202da3;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-  </style>
-  <a href="../index.html"> <button aria-label="Volver">Volver</button> </a>
+
+  <script src="../js/script.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

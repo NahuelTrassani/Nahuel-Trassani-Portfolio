@@ -30,9 +30,7 @@
         <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#contacto" title="Contacto"><i
               class="fa-solid fa-envelope"></i></a></li>
       </ul>
-      <button class="sidebar__theme-toggle" aria-label="Cambiar tema">
-        <i class="sidebar__theme-icon fa-regular fa-sun"></i>
-      </button>
+
     </nav>
   </div>
 
@@ -40,6 +38,8 @@
     <h1 class="header__title">Nahuel Trassani</h1>
     <nav class="header__nav">
       <ul class="header__nav-list">
+        <li class="header__nav-item"><a class="header__nav-link" href="index.html">Inicio
+            <i class="fa-solid fa-arrow-right"></i></a></li>
         <li class="header__nav-item"><a class="header__nav-link" href="pages/carta-presentacion.html">Sobre Mí
             <i class="fa-solid fa-arrow-right"></i></a></li>
         <li class="header__nav-item"><a class="header__nav-link" href="pages/habilidades.html">Habilidades
@@ -50,9 +50,62 @@
             <i class="fa-solid fa-arrow-right"></i></a></li>
       </ul>
     </nav>
-    <button class="header__theme-toggle" aria-label="Cambiar tema">
-      <i class="header__theme-icon fa-regular fa-sun"></i>
-    </button>
+
+    <div class="header-content">
+      <div class="dropdown">
+        <button class="dropdown__toggle" type="button">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <div class="dropdown__menu dropdown__menu--wide">
+          <a class="dropdown__item" href="pages/carta-presentacion.html">
+            <i class="dropdown__icon fas fa-user"></i>
+            <div class="dropdown__content">
+              <div class="dropdown__title">Sobre Mí</div>
+              <div class="dropdown__description">Conoce mi historia y experiencia</div>
+            </div>
+          </a>
+
+          <a class="dropdown__item" href="pages/habilidades.html">
+            <i class="dropdown__icon fas fa-code"></i>
+            <div class="dropdown__content">
+              <div class="dropdown__title">Habilidades</div>
+              <div class="dropdown__description">Tecnologías que domino</div>
+            </div>
+          </a>
+
+          <a class="dropdown__item" href="pages/proyectos.html">
+            <i class="dropdown__icon fas fa-briefcase"></i>
+            <div class="dropdown__content">
+              <div class="dropdown__title">Proyectos</div>
+              <div class="dropdown__description">Mis trabajos destacados</div>
+            </div>
+          </a>
+          <a class="dropdown__item" href="pages/contacto.html">
+            <i class="dropdown__icon fas fa-envelope"></i>
+            <div class="dropdown__content">
+              <div class="dropdown__title">Contacto</div>
+              <div class="dropdown__description">Ponte en contacto conmigo</div>
+            </div>
+          </a>
+          <div class="dropdown__divider"></div>
+
+          <button class="dropdown__theme-item" id="mobileThemeToggle" aria-label="Cambiar tema">
+            <i class="dropdown__icon fa-regular fa-sun"></i>
+            <div class="dropdown__content">
+              <div class=" dropdown__title">Cambiar Tema</div>
+              <div class="dropdown__description">Modo claro/oscuro</div>
+            </div>
+          </button>
+
+        </div>
+      </div>
+    </div>
   </header>
 
   <main class="main">
