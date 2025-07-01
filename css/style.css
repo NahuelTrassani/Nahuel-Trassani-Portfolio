@@ -793,7 +793,7 @@ main {
   }
 
   .header__nav {
-    display: block;
+    display: none;
   }
 
   .header__nav-list {
@@ -926,7 +926,9 @@ main {
     grid-template-columns: 80px 1fr;
     grid-template-rows: auto 1fr auto;
   }
-
+  .header__nav {
+    display: block;
+  }
   .sidebar {
     display: flex;
     grid-area: sidebar;
