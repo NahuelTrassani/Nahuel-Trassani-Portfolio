@@ -22,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       if (sidebarThemeIcon) {
         if (body.classList.contains("body--dark-theme")) {
-          sidebarThemeIcon.classList.remove("fa-sun");
-          sidebarThemeIcon.classList.add("fa-moon");
+          sidebarThemeIcon.classList.remove("fa-moon");
+          sidebarThemeIcon.classList.add("fa-sun");
           sidebarThemeToggle.setAttribute("aria-label", "Cambiar a tema claro");
           sidebarThemeToggle.setAttribute("title", "Cambiar a tema claro");
         } else {
-          sidebarThemeIcon.classList.remove("fa-moon");
-          sidebarThemeIcon.classList.add("fa-sun");
+          sidebarThemeIcon.classList.remove("fa-sun");
+          sidebarThemeIcon.classList.add("fa-moon");
           sidebarThemeToggle.setAttribute(
             "aria-label",
             "Cambiar a tema oscuro"
@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (dropdownThemeIcon) {
         if (body.classList.contains("body--dark-theme")) {
-          dropdownThemeIcon.classList.remove("fa-sun");
-          dropdownThemeIcon.classList.add("fa-moon");
+          dropdownThemeIcon.classList.remove("fa-moon");
+          dropdownThemeIcon.classList.add("fa-sun");
           if (dropdownTitle) dropdownTitle.textContent = "Tema Claro";
           if (dropdownDescription)
             dropdownDescription.textContent = "Cambiar a modo claro";
@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "Cambiar a tema claro"
           );
         } else {
-          dropdownThemeIcon.classList.remove("fa-moon");
-          dropdownThemeIcon.classList.add("fa-sun");
+          dropdownThemeIcon.classList.remove("fa-sun");
+          dropdownThemeIcon.classList.add("fa-moon");
           if (dropdownTitle) dropdownTitle.textContent = "Tema Oscuro";
           if (dropdownDescription)
             dropdownDescription.textContent = "Cambiar a modo oscuro";

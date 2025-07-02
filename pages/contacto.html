@@ -16,16 +16,14 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap"
     rel="stylesheet">
 
-
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
+<body>
+  <div class="sidebar">
 
-<body class="bg-light">
+  </div>
 
   <header class="header">
     <h1 class="header__title">Nahuel Trassani</h1>
@@ -57,7 +55,7 @@
 
         <div class="dropdown__menu dropdown__menu--wide">
           <a class="dropdown__item" href="../index.html">
-            <i class="dropdown__icon fas fa-user"></i>
+            <i class="dropdown__icon fas fa-home"></i>
             <div class="dropdown__content">
               <div class="dropdown__title">Inicio</div>
               <div class="dropdown__description">Volver a la página principal</div>
@@ -93,223 +91,198 @@
           <button class="dropdown__theme-item" id="mobileThemeToggle" aria-label="Cambiar tema">
             <i class="dropdown__icon fa-regular fa-sun"></i>
             <div class="dropdown__content">
-              <div class=" dropdown__title">Cambiar Tema</div>
+              <div class="dropdown__title">Cambiar Tema</div>
               <div class="dropdown__description">Modo claro/oscuro</div>
             </div>
           </button>
-
         </div>
       </div>
     </div>
+
+    <!-- <button class="header__theme-toggle" id="desktopThemeToggle" aria-label="Cambiar tema">
+      <span class="header__theme-icon">
+        <i class="fa-regular fa-sun"></i>
+      </span>
+    </button> -->
   </header>
 
+  <main id="contacto-page">
+    <div class="container-fluid">
+      <div class="row g-0">
+        <!-- Formulario de Contacto -->
+        <div class="col-lg-4 offset-lg-3">
+          <div class="contact-form">
+            <h2 class="contact-form__title">
+              <i class="fas fa-envelope me-2"></i>Contacto
+            </h2>
+            <p class="text-center text-muted mb-4">¿Tienes un proyecto en mente? ¡Hablemos!</p>
 
-
-  <!-- Main Content -->
-  <main class="pt-5 mt-4">
-    <div class="container my-5">
-      <!-- Back Button -->
-      <div class="row mb-4">
-        <div class="col-12">
-          <a href="../index.html" class="btn btn-secondary">
-            <i class="fas fa-arrow-left me-2"></i>Volver al inicio
-          </a>
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <!-- Contact Form -->
-        <div class="col-lg-8">
-          <div class="card shadow">
-            <!-- Card Header -->
-            <div class="card-header bg-primary text-white text-center py-4">
-              <h2 class="card-title mb-2">
-                <i class="fas fa-envelope me-3"></i>Contacto
-              </h2>
-              <p class="card-text mb-0">¿Tienes un proyecto en mente? ¡Hablemos!</p>
-            </div>
-
-            <!-- Card Body -->
-            <div class="card-body p-4">
-              <form novalidate class="needs-validation">
-                <div class="row g-3">
-                  <!-- First Name -->
-                  <div class="col-md-6">
-                    <label for="firstName" class="form-label fw-semibold">
-                      <i class="fas fa-user me-2 text-primary"></i>Nombre *
-                    </label>
-                    <input type="text" class="form-control" id="firstName" required>
-                    <div class="invalid-feedback">
-                      Por favor, ingresa tu nombre.
-                    </div>
-                  </div>
-
-                  <!-- Last Name -->
-                  <div class="col-md-6">
-                    <label for="lastName" class="form-label fw-semibold">
-                      <i class="fas fa-user me-2 text-primary"></i>Apellido *
-                    </label>
-                    <input type="text" class="form-control" id="lastName" required>
-                    <div class="invalid-feedback">
-                      Por favor, ingresa tu apellido.
-                    </div>
-                  </div>
-
-                  <!-- Email -->
-                  <div class="col-12">
-                    <label for="email" class="form-label fw-semibold">
-                      <i class="fas fa-envelope me-2 text-primary"></i>Correo Electrónico *
-                    </label>
-                    <input type="email" class="form-control" id="email" required>
-                    <div class="invalid-feedback">
-                      Por favor, ingresa un correo electrónico válido.
-                    </div>
-                  </div>
-
-                  <!-- Phone -->
-                  <div class="col-12">
-                    <label for="phone" class="form-label fw-semibold">
-                      <i class="fas fa-phone me-2 text-primary"></i>Teléfono
-                    </label>
-                    <input type="tel" class="form-control" id="phone">
-                  </div>
-
-                  <!-- Company -->
-                  <div class="col-12">
-                    <label for="company" class="form-label fw-semibold">
-                      <i class="fas fa-building me-2 text-primary"></i>Empresa/Organización
-                    </label>
-                    <input type="text" class="form-control" id="company">
-                  </div>
-
-                  <!-- Subject -->
-                  <div class="col-12">
-                    <label for="subject" class="form-label fw-semibold">
-                      <i class="fas fa-tag me-2 text-primary"></i>Asunto *
-                    </label>
-                    <select class="form-select" id="subject" required>
-                      <option value="">Selecciona un asunto</option>
-                      <option value="proyecto">Proyecto Web</option>
-                      <option value="consultoria">Consultoría</option>
-                      <option value="colaboracion">Colaboración</option>
-                      <option value="empleo">Oportunidad de Empleo</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Por favor, selecciona un asunto.
-                    </div>
-                  </div>
-
-                  <!-- Message -->
-                  <div class="col-12">
-                    <label for="message" class="form-label fw-semibold">
-                      <i class="fas fa-comment me-2 text-primary"></i>Mensaje *
-                    </label>
-                    <textarea class="form-control" id="message" rows="6" required
-                      placeholder="Cuéntame sobre tu proyecto o consulta..."></textarea>
-                    <div class="invalid-feedback">
-                      Por favor, escribe tu mensaje.
-                    </div>
-                  </div>
-
-                  <!-- Privacy Checkbox -->
-                  <div class="col-12">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="privacy" required>
-                      <label class="form-check-label" for="privacy">
-                        Acepto el tratamiento de mis datos personales según la política de privacidad *
-                      </label>
-                      <div class="invalid-feedback">
-                        Debes aceptar la política de privacidad.
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Submit Button -->
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary btn-lg px-4">
-                      <i class="fas fa-paper-plane me-2"></i>
-                      Enviar Mensaje
-                    </button>
+            <form novalidate class="needs-validation">
+              <div class="row g-3">
+                <!-- Nombre -->
+                <div class="col-md-6">
+                  <label for="firstName" class="form-label">
+                    <i class="fas fa-user me-2"></i>Nombre *
+                  </label>
+                  <input type="text" class="form-control" id="firstName" required>
+                  <div class="invalid-feedback">
+                    Por favor, ingresa tu nombre.
                   </div>
                 </div>
-              </form>
-            </div>
+
+                <!-- Apellido -->
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label">
+                    <i class="fas fa-user me-2"></i>Apellido *
+                  </label>
+                  <input type="text" class="form-control" id="lastName" required>
+                  <div class="invalid-feedback">
+                    Por favor, ingresa tu apellido.
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-12">
+                  <label for="email" class="form-label">
+                    <i class="fas fa-envelope me-2"></i>Correo Electrónico *
+                  </label>
+                  <input type="email" class="form-control" id="email" required>
+                  <div class="invalid-feedback">
+                    Por favor, ingresa un correo electrónico válido.
+                  </div>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="col-12">
+                  <label for="phone" class="form-label">
+                    <i class="fas fa-phone me-2"></i>Teléfono
+                  </label>
+                  <input type="tel" class="form-control" id="phone">
+                </div>
+
+                <!-- Empresa -->
+                <div class="col-12">
+                  <label for="company" class="form-label">
+                    <i class="fas fa-building me-2"></i>Empresa/Organización
+                  </label>
+                  <input type="text" class="form-control" id="company">
+                </div>
+
+                <!-- Asunto -->
+                <div class="col-12">
+                  <label for="subject" class="form-label">
+                    <i class="fas fa-tag me-2"></i>Asunto *
+                  </label>
+                  <select class="form-select" id="subject" required>
+                    <option value="">Selecciona un asunto</option>
+                    <option value="proyecto">Proyecto Web</option>
+                    <option value="consultoria">Consultoría</option>
+                    <option value="colaboracion">Colaboración</option>
+                    <option value="empleo">Oportunidad de Empleo</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor, selecciona un asunto.
+                  </div>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="col-12">
+                  <label for="message" class="form-label">
+                    <i class="fas fa-comment me-2"></i>Mensaje *
+                  </label>
+                  <textarea class="form-control" id="message" rows="6" required
+                    placeholder="Cuéntame sobre tu proyecto o consulta..."></textarea>
+                  <div class="invalid-feedback">
+                    Por favor, escribe tu mensaje.
+                  </div>
+                </div>
+
+                <!-- Checkbox de Privacidad -->
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="privacy" required>
+                    <label class="form-check-label" for="privacy">
+                      Acepto el tratamiento de mis datos personales según la política de privacidad *
+                    </label>
+                    <div class="invalid-feedback">
+                      Debes aceptar la política de privacidad.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Botón de Envío -->
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary-custom">
+                    <i class="fas fa-paper-plane me-2"></i>
+                    Enviar Mensaje
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
 
-        <!-- Contact Information -->
-        <div class="col-lg-4">
-          <div class="card shadow h-100">
-            <div class="card-header bg-secondary text-white">
-              <h3 class="card-title mb-0">
-                <i class="fas fa-address-card me-2"></i>Información de Contacto
-              </h3>
+        <!-- Información de Contacto -->
+        <div class="col-lg-3">
+          <div class="contact-info">
+            <h3 class="contact-info__title">
+              <i class="fas fa-address-card me-2"></i>Información de Contacto
+            </h3>
+
+            <!-- Email -->
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info__content">
+                <strong>Email</strong>
+                <a href="mailto:mn.trassani@gmail.com">mn.trassani@gmail.com</a>
+              </div>
             </div>
 
-            <div class="card-body">
-              <!-- Email -->
-              <div class="d-flex align-items-center mb-3 p-2 bg-light rounded">
-                <div class="flex-shrink-0">
-                  <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 40px; height: 40px;">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                </div>
-                <div class="ms-3">
-                  <strong class="d-block">Email</strong>
-                  <a href="mailto:mn.trassani@gmail.com" class="text-decoration-none">
-                    mn.trassani@gmail.com
-                  </a>
-                </div>
+            <!-- Ubicación -->
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <i class="fas fa-map-marker-alt"></i>
               </div>
-
-              <!-- Location -->
-              <div class="d-flex align-items-center mb-3 p-2 bg-light rounded">
-                <div class="flex-shrink-0">
-                  <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 40px; height: 40px;">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                </div>
-                <div class="ms-3">
-                  <strong class="d-block">Ubicación</strong>
-                  <span class="text-muted">General Roca, Río Negro, Argentina</span>
-                </div>
+              <div class="contact-info__content">
+                <strong>Ubicación</strong>
+                <span>General Roca, Río Negro, Argentina</span>
               </div>
+            </div>
 
-              <!-- Response Time -->
-              <div class="d-flex align-items-center mb-4 p-2 bg-light rounded">
-                <div class="flex-shrink-0">
-                  <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 40px; height: 40px;">
-                    <i class="fas fa-clock"></i>
-                  </div>
-                </div>
-                <div class="ms-3">
-                  <strong class="d-block">Horario de Respuesta</strong>
-                  <span class="text-muted">24-48 horas</span>
-                </div>
+            <!-- Tiempo de Respuesta -->
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <i class="fas fa-clock"></i>
               </div>
-
-              <hr>
-
-              <!-- Social Links -->
-              <h4 class="mb-3">
-                <i class="fas fa-share-alt me-2"></i>Sígueme en:
-              </h4>
-
-              <div class="d-grid gap-2">
-                <a href="#" class="btn btn-outline-primary text-start">
-                  <i class="fab fa-linkedin me-2"></i>LinkedIn
-                </a>
-                <a href="#" class="btn btn-outline-dark text-start">
-                  <i class="fab fa-github me-2"></i>GitHub
-                </a>
-                <a href="#" class="btn btn-outline-info text-start">
-                  <i class="fab fa-twitter me-2"></i>Twitter
-                </a>
+              <div class="contact-info__content">
+                <strong>Horario de Respuesta</strong>
+                <span>24-48 horas</span>
               </div>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Redes Sociales -->
+            <h4 class="mb-3">
+              <i class="fas fa-share-alt me-2"></i>Sígueme en:
+            </h4>
+
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i>LinkedIn
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-github"></i>GitHub
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>Twitter
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>Instagram
+              </a>
             </div>
           </div>
         </div>
@@ -317,32 +290,38 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-light py-4 mt-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-auto text-center">
-          <h5 class="mb-3">Redes Sociales</h5>
-          <div class="d-flex justify-content-center gap-3">
-            <a class="btn btn-outline-light btn-sm" href="#" aria-label="LinkedIn">
-              <i class="fab fa-linkedin me-1"></i>LinkedIn
-            </a>
-            <a class="btn btn-outline-light btn-sm" href="#" aria-label="GitHub">
-              <i class="fab fa-github me-1"></i>GitHub
-            </a>
-            <a class="btn btn-outline-light btn-sm" href="#" aria-label="Twitter">
-              <i class="fab fa-twitter me-1"></i>Twitter
-            </a>
-          </div>
-        </div>
-      </div>
+  <footer class="footer">
+    <div class="footer__section">
+      <h3 class="footer__section-title">Redes sociales</h3>
+      <ul class="footer__social-links">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#redes" aria-label="Facebook" title="Facebook" rel="noopener noreferrer">
+            <i class="footer__social-icon fa-brands fa-facebook"></i>Facebook
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#redes" aria-label="Twitter" title="Twitter" rel="noopener noreferrer">
+            <i class="footer__social-icon fa-brands fa-twitter"></i>Twitter
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#redes" aria-label="Instagram" title="Instagram"
+            rel="noopener noreferrer">
+            <i class="footer__social-icon fa-brands fa-instagram"></i>Instagram
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#redes" aria-label="Discord" title="Discord" rel="noopener noreferrer">
+            <i class="footer__social-icon fa-brands fa-discord"></i>Discord
+          </a>
+        </li>
+      </ul>
     </div>
   </footer>
 
-  <script src="../js/script.js"></script>
   <!-- Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
+  <script src="../js/script.js"></script>
 </body>
 
 </html>
