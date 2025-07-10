@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const sidebarThemeToggle = document.querySelector(".sidebar__theme-toggle");
+  const headerThemeToggle = document.querySelector(".header__toggle-theme");
   const dropdownThemeToggle = document.querySelector(".dropdown__theme-item");
 
   const body = document.body;
@@ -16,24 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateIcon() {
     // Actualizar ícono del sidebar
-    if (sidebarThemeToggle) {
-      const sidebarThemeIcon = sidebarThemeToggle.querySelector(
+    if (headerThemeToggle) {
+      const sidebarThemeIcon = headerThemeToggle.querySelector(
         ".sidebar__theme-icon"
       );
       if (sidebarThemeIcon) {
         if (body.classList.contains("body--dark-theme")) {
           sidebarThemeIcon.classList.remove("fa-moon");
           sidebarThemeIcon.classList.add("fa-sun");
-          sidebarThemeToggle.setAttribute("aria-label", "Cambiar a tema claro");
-          sidebarThemeToggle.setAttribute("title", "Cambiar a tema claro");
+          headerThemeToggle.setAttribute("aria-label", "Cambiar a tema claro");
+          headerThemeToggle.setAttribute("title", "Cambiar a tema claro");
         } else {
           sidebarThemeIcon.classList.remove("fa-sun");
           sidebarThemeIcon.classList.add("fa-moon");
-          sidebarThemeToggle.setAttribute(
+          headerThemeToggle.setAttribute(
             "aria-label",
             "Cambiar a tema oscuro"
           );
-          sidebarThemeToggle.setAttribute("title", "Cambiar a tema oscuro");
+          headerThemeToggle.setAttribute("title", "Cambiar a tema oscuro");
         }
       }
     }
@@ -128,8 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Event listeners para los botones de tema
-  if (sidebarThemeToggle) {
-    sidebarThemeToggle.addEventListener("click", toggleDarkTheme);
+  if (headerThemeToggle) {
+    headerThemeToggle.addEventListener("click", toggleDarkTheme);
   }
 
   if (dropdownThemeToggle) {
