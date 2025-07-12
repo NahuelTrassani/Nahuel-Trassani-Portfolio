@@ -330,10 +330,13 @@ body {
   z-index: 110;
   display: flex;
   grid-area: header;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   min-height: 60px; /* Altura mínima más pequeña */
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  height: 70px !important;
 }
 
 .header__title {
@@ -385,6 +388,15 @@ body {
 }
 
 .header__toggle-theme {
+  /* Reset específico de Bootstrap */
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  vertical-align: baseline !important;
+  font-family: inherit !important;
+  outline: none !important;
+
+  /* Tus estilos originales */
   background: none;
   border: none;
   cursor: pointer;
@@ -409,6 +421,11 @@ body {
 
 .header__theme-icon {
   line-height: 0;
+}
+
+.header__divider {
+  background-color: #e0e0e0;
+  margin: 0.5rem 0;
 }
 
 /*
@@ -479,7 +496,6 @@ main {
 .sidebar__nav-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 
 /*
 * FOOTER - BEM
@@ -959,7 +975,7 @@ main {
     flex: 1;
     min-width: 0; /* Permite que se contraiga */
     display: flex;
-    align-items: center;  
+    align-items: center;
   }
   .header__nav {
     display: block;

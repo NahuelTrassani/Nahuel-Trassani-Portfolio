@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto | Nahuel Trassani - Developer</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,9 +17,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,8 +40,9 @@
             <i class="fa-solid fa-arrow-right"></i></a></li>
         <li class="header__nav-item"><a class="header__nav-link" href="../pages/contacto.html">Contacto
             <i class="fa-solid fa-arrow-right"></i></a></li>
+
         <!-- toggle  -->
-        <li>
+        <li class="header__nav-item">
           <button class="header__toggle-theme" aria-label="Cambiar tema">
             <i class="dropdown__icon fa-regular fa-sun"></i>
             <div class="dropdown__title">Cambiar Tema</div>
@@ -108,15 +110,29 @@
   </header>
 
   <main id="contacto-page">
+    <!-- Componente -->
     <div class="container-fluid">
-      <div class="row g-0">
+      <div class="row g-0 justify-content-center">
+        <div class="col-auto text-center my-5">
+          <div class="contact-info">
+            <h3 class="contact-info__title">
+              <i class="fa-solid fa-circle-exclamation me-2"></i>¡Esta página incluye bootstrap!
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row g-0 justify-content-center">
+
         <!-- Formulario de Contacto -->
-        <div class="col-lg-4 offset-lg-3">
+        <div class="col-auto center my-5">
           <div class="contact-form">
             <h2 class="contact-form__title">
               <i class="fas fa-envelope me-2"></i>Contacto
             </h2>
-            <p class="text-center text-muted mb-4">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+            <p class="text-center text-primary mb-4">¿Tienes un proyecto en mente? ¡Hablemos!</p>
 
             <form novalidate class="needs-validation">
               <div class="row g-3">
@@ -225,7 +241,7 @@
         </div>
 
         <!-- Información de Contacto -->
-        <div class="col-lg-3">
+        <div class="col-auto center my-5">
           <div class="contact-info">
             <h3 class="contact-info__title">
               <i class="fas fa-address-card me-2"></i>Información de Contacto
@@ -287,6 +303,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </main>
