@@ -1,0 +1,31 @@
+
+// ========================================
+// ARCHIVO PRINCIPAL: style.scss
+// ========================================
+
+// 1. Abstracts (variables y funciones)
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Base (reset, tipografía, estilos base)
+@import 'base/reset';
+@import 'base/typography';
+
+// 3. Layout (estructura principal)
+@import 'layout/header';
+@import 'layout/sidebar';
+@import 'layout/main';
+@import 'layout/footer';
+
+// 4. Components (componentes específicos)
+@import 'components/hero';
+@import 'components/content-section';
+@import 'components/projects';
+@import 'components/skills';
+@import 'components/image-container';
+@import 'components/dropdown';
+@import 'components/contact-form';
+@import 'components/buttons';
+
+// 5. Themes (temas)
+@import 'themes/dark-theme';

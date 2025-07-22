@@ -1,0 +1,25 @@
+// ========================================
+// TIPOGRAFÍA
+// base/_typography.scss
+// ========================================
+
+// FUENTES BASE
+// ------------
+.form-label,
+.form-control,
+.form-select,
+.btn,
+.text-muted {
+  font-family: $font-primary !important;
+}
+
+.contact-subtitle {
+  font-family: $font-primary;
+  color: #6c757d;
+  transition: color $transition-normal;
+}
+
+// Corrección para tema oscuro
+.main--dark-theme .contact-subtitle {
+  color: #adb5bd !important;
+}

@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Archivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos compilados de Sass
+*.css.map
+styleOLD_noSass.css
+dist/
+build/
+
+# Archivos de configuración local
+.env
+.env.local
+
+# Cache
+.npm
+.cache/

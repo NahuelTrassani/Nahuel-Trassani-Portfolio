@@ -1,0 +1,47 @@
+// ========================================
+// RESET Y ESTILOS BASE
+// base/_reset.scss
+// ========================================
+
+// RESET BÁSICO
+// ------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// BODY BASE
+// ---------
+body {
+  font-family: $font-primary;
+  background-color: $color-background;
+  color: $color-text;
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-size: $font-size-base;
+  width: 100%;
+  display: grid;
+  
+  // MOBILE FIRST - Grid layout
+  grid-template-areas: $grid-areas-mobile;
+  grid-template-columns: $grid-columns-mobile;
+  grid-template-rows: $grid-rows;
+  min-height: 100vh;
+}
+
+// RESPONSIVE BODY
+// ---------------
+@media (min-width: $breakpoint-tablet) {
+  body {
+    font-size: $font-size-tablet;
+  }
+}
+
+@media (min-width: $breakpoint-large-desktop) {
+  body {
+    grid-template-areas: $grid-areas-desktop;
+    grid-template-columns: $grid-columns-desktop;
+    grid-template-rows: $grid-rows;
+  }
+}

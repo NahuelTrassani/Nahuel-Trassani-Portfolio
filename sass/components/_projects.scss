@@ -1,0 +1,126 @@
+// _projects.scss
+// Sección de proyectos
+
+.projects {
+  padding: 2rem 1rem;
+
+  &__inner {
+    display: flex;
+    flex-direction: column; // Stack en mobile
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__card {
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &__card-title {
+    margin-top: 0;
+    color: #2c3e50;
+    text-align: left;
+    font-size: 1.2rem; // Reducido para mobile
+    margin-bottom: 0.6em;
+    line-height: 1.2;
+  }
+
+  &__card-description {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  &__tech {
+    margin-bottom: 0.5rem;
+    color: #777;
+    font-size: 0.85rem;
+    text-align: left;
+  }
+
+  &__tech-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  &__tech-item {
+    background-color: #f0f0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+// Dark theme adaptations
+.projects__card--dark-theme {
+  background-color: #444;
+  color: #e0e0e0;
+  border-color: #666;
+
+  .projects__card-title {
+    color: #f5f5f5;
+  }
+
+  .projects__tech {
+    color: #ccc;
+  }
+
+  .projects__card-description {
+    color: #ccc;
+  }
+
+  .projects__tech-item {
+    background-color: #555;
+    color: #e0e0e0;
+  }
+}
+
+// Media queries
+@media (min-width: 768px) {
+  .projects__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .projects__card {
+    padding: 1.5rem;
+
+    &-title {
+      font-size: 1.4rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1028px) {
+  .projects__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .projects__card {
+    padding: 2rem;
+  }
+}
