@@ -341,11 +341,11 @@ body {
 
 .header__title {
   margin: 0;
-  font-size: 1.2rem; /* Más pequeño en mobile */
+  font-size: 1.5rem;
+  font-style: bold;
   letter-spacing: 1px;
-  font-family: "Open Sans", sans-serif;
   flex: 1;
-  min-width: 0; /* Permite que se contraiga */
+  min-width: 0;
 }
 
 .header__subtitle {
@@ -952,7 +952,7 @@ main {
   }
 }
 /* DESKTOP - 1024px+ */
-@media (min-width: 1024px) {
+@media (min-width: 1028px) {
   body {
     grid-template-areas:
       "sidebar header"
@@ -969,14 +969,15 @@ main {
 
   .header__title {
     margin: 0;
-    font-size: 1.2rem; /* Más pequeño en mobile */
+    font-size: 2rem;
     letter-spacing: 1px;
     font-family: "Open Sans", sans-serif;
     flex: 1;
-    min-width: 0; /* Permite que se contraiga */
+    min-width: 0;
     display: flex;
     align-items: center;
   }
+
   .header__nav {
     display: block;
   }
