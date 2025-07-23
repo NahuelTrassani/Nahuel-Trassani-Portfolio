@@ -1,18 +1,20 @@
-/*
-* MAIN
-*/
+// ========================================
+// MAIN COMPONENT
+// layout/_main.scss
+// ========================================
+
 main {
   grid-area: main;
   flex-grow: 1;
-  padding: 70px 0 2rem 0;
+  padding: $header-height-mobile 0 $spacing-xl 0;
   align-items: center;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: $color-background;
+  color: $color-text;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-  background-image: url("../images/13164433_5180058.svg");
+  background-image: $bg-image-light;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -21,11 +23,13 @@ main {
   position: relative;
 }
 
-// Dark theme
+// ========================================
+// TEMA OSCURO
+// ========================================
 .main--dark-theme {
-  background: #212121;
-  color: #e0e0e0;
-  background-image: url("../images/jeremy-bishop-8xznAGy4HcY-unsplash.jpg");
+  background: $dark-bg-secondary;
+  color: $dark-text;
+  background-image: $bg-image-dark;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -33,31 +37,58 @@ main {
   min-height: 100vh;
 
   .hero__button:hover {
-    background-color: #000000;
-    color: white;
+    background-color: $color-black;
+    color: $color-white;
   }
 }
 
-// Responsive
-@media (min-width: 768px) {
+// ========================================
+// MEDIA QUERIES
+// ========================================
+
+// MOBILE PEQUEÑO - hasta 480px
+@media (max-width: $breakpoint-mobile) {
   main {
-    padding: 80px 2rem 2rem 2rem;
+    padding: ($header-height-mobile - 10px) $spacing-sm $spacing-md $spacing-sm;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+// TABLET - 768px+
+@media (min-width: $breakpoint-tablet) {
   main {
-    padding-top: 80px;
+    padding: $header-height-tablet $padding-tablet $spacing-xl $padding-tablet;
   }
 }
 
-@media (min-width: 1028px) {
+// TABLET ESPECÍFICO - entre 768px y 1023px
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-tablet-max) {
   main {
-    padding: 100px 3rem 2rem 3rem;
-    background-attachment: scroll;
+    padding-top: $header-height-tablet;
+    padding-left: $spacing-xl;
+    padding-right: $spacing-xl;
+  }
+}
+
+// DESKTOP - 1024px+
+@media (min-width: $breakpoint-desktop) {
+  main {
+    padding: $header-height-desktop $padding-desktop $spacing-xl $padding-desktop;
+    background-attachment: scroll; // Cambiado de fixed a scroll para mayor estabilidad
   }
 
   .main--dark-theme {
-    background-attachment: scroll;
+    background-attachment: scroll; // Cambiado de fixed a scroll
+  }
+}
+
+// DESKTOP GRANDE - 1028px+
+@media (min-width: $breakpoint-large-desktop) {
+  main {
+    // Ajustes específicos para el grid con sidebar
+    margin-left: 0; // El grid ya maneja el espaciado del sidebar
+    
+    // Opcional: padding adicional si se necesita
+    padding-left: $padding-desktop + $spacing-md;
+    padding-right: $padding-desktop + $spacing-md;
   }
 }

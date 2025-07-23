@@ -46,7 +46,7 @@
 
 // DESKTOP SIDEBAR
 // ---------------
-@media (min-width: $breakpoint-large-desktop) {
+@media (min-width: $breakpoint-desktop) {
   .sidebar {
     display: flex;
     grid-area: sidebar;
@@ -91,7 +91,6 @@
     }
   }
 }
-
 
 // Dark theme
 .sidebar--dark-theme {

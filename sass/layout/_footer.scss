@@ -1,20 +1,22 @@
-/*
-* FOOTER - BEM
-*/
+// ========================================
+// FOOTER COMPONENT
+// components/_footer.scss
+// ========================================
+
 .footer {
-  background: linear-gradient(135deg, #1a172c 0%, #082f52 100%);
-  color: #fff;
-  padding: 1rem;
+  background: $gradient-primary;
+  color: $color-white;
+  padding: $spacing-md;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 102;
+  z-index: $z-index-footer;
   grid-area: footer;
 
   &__section {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: $spacing-md;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -23,9 +25,9 @@
 
     &-title {
       font-weight: 700;
-      margin-bottom: 0.75rem;
-      font-size: 1rem;
-      border-bottom: 2px solid #fff;
+      margin-bottom: $spacing-sm + 0.25rem; // 0.75rem
+      font-size: $font-size-normal;
+      border-bottom: 2px solid $color-white;
       display: inline-block;
       padding-bottom: 5px;
     }
@@ -37,19 +39,19 @@
     margin: 0;
 
     &-item {
-      margin-bottom: 0.5rem;
+      margin-bottom: $spacing-sm;
     }
   }
 
   &__link {
-    color: #dbeafe;
+    color: $color-link-social;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color $transition-normal;
     font-size: 0.9rem;
 
     &:hover {
-      color: #ffdd57;
+      color: $color-link-footer-hover;
       text-decoration: underline;
     }
   }
@@ -57,7 +59,7 @@
   &__contact-info {
     margin: 5px 0;
     font-size: 0.8rem;
-    color: #dbeafe;
+    color: $color-link-social;
   }
 
   &__social {
@@ -71,47 +73,150 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 0.5rem;
+      margin-bottom: $spacing-sm;
     }
 
     &-link {
-      color: #dbeafe;
+      color: $color-link-social;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.85rem;
+      font-size: $font-size-small;
       display: flex;
       align-items: center;
-      transition: color 0.3s ease;
+      transition: color $transition-normal;
 
       &:hover {
-        color: #ffdd57;
+        color: $color-link-footer-hover;
         text-decoration: underline;
       }
     }
 
     &-icon {
-      font-size: 1rem;
-      margin-right: 0.5rem;
+      font-size: $font-size-normal;
+      margin-right: $spacing-sm;
     }
   }
 }
 
-// Dark theme
+// ========================================
+// TEMA OSCURO
+// ========================================
 .footer--dark-theme {
-  background: linear-gradient(135deg, #333 0%, #555 100%);
-  color: #f5f5f5;
+  background: $gradient-dark;
+  color: $dark-text-primary;
 }
 
-// Responsive
-@media (min-width: 768px) {
+// ========================================
+// MEDIA QUERIES
+// ========================================
+
+// MOBILE PEQUEÑO - hasta 480px
+@media (max-width: $breakpoint-mobile) {
   .footer {
-    padding: 1.5rem;
+    padding: $spacing-sm;
+
+    &__section {
+      margin-bottom: $spacing-sm;
+
+      &-title {
+        font-size: 0.9rem;
+        margin-bottom: $spacing-sm;
+      }
+    }
+
+    &__link {
+      font-size: 0.8rem;
+    }
+
+    &__social {
+      &-link {
+        font-size: 0.75rem;
+      }
+
+      &-icon {
+        font-size: 0.9rem;
+        margin-right: $spacing-xs;
+      }
+    }
+  }
+}
+
+// TABLET - 768px+
+@media (min-width: $breakpoint-tablet) {
+  .footer {
+    padding: $spacing-lg;
     flex-direction: row;
+    justify-content: flex-start;
 
     &__section {
       width: auto;
       margin-bottom: 0;
-      margin-right: 2rem;
+      margin-right: $spacing-xl;
+      text-align: left;
+
+      &-title {
+        font-size: 1.1rem;
+      }
+    }
+
+    &__link {
+      font-size: $font-size-normal;
+    }
+
+    &__social {
+      &-link {
+        font-size: 0.9rem;
+      }
+
+      &-icon {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// DESKTOP - 1024px+
+@media (min-width: $breakpoint-desktop) {
+  .footer {
+    padding: $spacing-xl;
+
+    &__section {
+      margin-right: $spacing-xxl;
+
+      &-title {
+        font-size: $font-size-large;
+        margin-bottom: $spacing-md;
+      }
+    }
+
+    &__link {
+      font-size: 1.05rem;
+    }
+
+    &__contact-info {
+      font-size: 0.9rem;
+    }
+
+    &__social {
+      &-link {
+        font-size: $font-size-normal;
+      }
+
+      &-icon {
+        font-size: $font-size-large;
+        margin-right: $spacing-sm + 0.25rem; // 0.75rem
+      }
+    }
+  }
+}
+
+// DESKTOP GRANDE - 1028px+
+@media (min-width: $breakpoint-large-desktop) {
+  .footer {
+    &__section {
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

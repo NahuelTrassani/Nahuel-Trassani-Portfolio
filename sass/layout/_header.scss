@@ -1,16 +1,18 @@
-/*
-* HEADER - BEM
-*/
+// ========================================
+// HEADER COMPONENT
+// components/_header.scss
+// ========================================
+
 .header {
-  background: linear-gradient(135deg, #1a172c 0%, #082f52 100%);
-  color: white;
-  padding: 0.75rem 1rem;
+  background: $gradient-primary;
+  color: $color-white;
+  padding: $spacing-sm $spacing-md;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 110;
+  z-index: $z-index-header;
   display: flex;
   grid-area: header;
   justify-content: center;
@@ -19,12 +21,12 @@
   min-height: 60px;
   box-sizing: border-box !important;
   margin: 0 !important;
-  height: 70px !important;
+  height: $header-height-mobile !important;
 
   &__title {
     margin: 0;
-    font-size: 1.5rem;
-    font-style: bold;
+    font-size: $font-size-h2-mobile;
+    font-weight: bold;
     letter-spacing: 1px;
     flex: 1;
     min-width: 0;
@@ -43,7 +45,7 @@
       margin: 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: $spacing-md;
     }
 
     &-item {
@@ -55,17 +57,17 @@
     }
 
     &-link {
-      color: #bbdefb;
+      color: $color-link;
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      padding: $spacing-sm $spacing-md;
+      border-radius: $border-radius-md;
+      transition: background-color $transition-normal;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: $font-size-normal;
 
       &:hover,
       &:focus {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba($color-white, 0.1);
         outline: none;
       }
     }
@@ -81,20 +83,20 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #bbdefb;
+    color: $color-link;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-md;
+    transition: background-color $transition-normal;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: $font-size-normal;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: $spacing-sm;
     width: auto;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba($color-white, 0.1);
       outline: none;
       transform: translateX(3px);
     }
@@ -105,45 +107,48 @@
   }
 
   &__divider {
-    background-color: #e0e0e0;
-    margin: 0.5rem 0;
+    background-color: $color-border;
+    margin: $spacing-sm 0;
   }
 }
 
-// Dark theme
+// ========================================
+// TEMA OSCURO
+// ========================================
 .header--dark-theme {
-  background: linear-gradient(135deg, #333 0%, #555 100%);
-  color: #e0e0e0;
+  background: $gradient-dark;
+  color: $dark-text;
 
   .header__nav-link {
-    color: white;
+    color: $color-white;
   }
 
   .header__theme-toggle {
-    color: #e0e0e0;
+    color: $dark-text;
   }
 
   .dropdown__toggle {
-    color: #e0e0e0;
+    color: $dark-text;
+    display: flex;
   }
 
   .hamburger span {
-    background: #e0e0e0;
+    background: $dark-text;
   }
 
   .dropdown__menu {
-    background: #333;
-    border-color: #555;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: $dark-bg-card;
+    border-color: $dark-border;
+    box-shadow: $box-shadow-dropdown-dark;
   }
 
   .dropdown__item,
   .dropdown__theme-item {
-    color: #e0e0e0;
+    color: $dark-text;
 
     &:hover {
-      background-color: #444;
-      color: #ffffff;
+      background-color: $dark-bg-card-hover;
+      color: $dark-text-primary;
     }
   }
 
@@ -152,28 +157,50 @@
   }
 
   .dropdown__divider {
-    background-color: #555;
+    background-color: $dark-border;
   }
 
   .header__toggle-theme {
-    color: #e0e0e0;
+    color: $dark-text;
 
     &:hover,
     &:focus {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #ffffff;
+      background-color: rgba($color-white, 0.1);
+      color: $dark-text-primary;
     }
   }
 }
 
-// Responsive
-@media (min-width: 768px) {
+// ========================================
+// MEDIA QUERIES
+// ========================================
+
+// MOBILE PEQUEÑO - hasta 480px
+@media (max-width: $breakpoint-mobile) {
   .header {
-    padding: 1rem;
-    min-height: 70px;
+    padding: $spacing-sm;
+    min-height: 60px;
 
     &__title {
-      font-size: 1.8rem;
+      font-size: 1.3rem;
+    }
+
+    &__toggle-theme {
+      padding: $spacing-xs $spacing-sm;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+// TABLET - 768px+
+@media (min-width: $breakpoint-tablet) {
+  .header {
+    padding: $spacing-md;
+    min-height: $header-height-tablet;
+    height: $header-height-tablet !important;
+
+    &__title {
+      font-size: $font-size-h1-tablet;
     }
 
     &__nav {
@@ -182,36 +209,48 @@
       &-list {
         display: flex;
         list-style: none;
-        gap: 1rem;
+        gap: $spacing-md;
         margin: 0;
         padding: 0;
       }
     }
 
-    &__theme-toggle {
+    &__toggle-theme {
       width: 50px;
       height: 50px;
-      font-size: 1.2rem;
-      margin-left: 1rem;
-      color: #bbdefb;
+      font-size: $font-size-large;
+      margin-left: $spacing-md;
+      color: $color-link;
+      display: flex;
     }
   }
 
   .dropdown__toggle {
-    display: none;
+    display: none; // Oculto por defecto en pantallas grandes
   }
 }
 
-@media (min-width: 1028px) {
+// TABLET ESPECÍFICO - entre 768px y 1023px
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-tablet-max) {
   .header {
-    padding: 1rem;
-    max-height: 100px;
+    &__nav {
+      display: none;
+    }
+  }
+}
+
+// DESKTOP - 1024px+
+@media (min-width: $breakpoint-desktop) {
+  .header {
+    padding: $spacing-md;
+    max-height: $header-height-desktop;
+    height: $header-height-desktop !important;
 
     &__title {
       margin: 0;
-      font-size: 2rem;
+      font-size: $font-size-h1-desktop;
       letter-spacing: 1px;
-      font-family: "Open Sans", sans-serif;
+      font-family: $font-secondary;
       flex: 1;
       min-width: 0;
       display: flex;
@@ -225,5 +264,16 @@
 
   .dropdown__toggle {
     display: none !important;
+  }
+}
+
+// DESKTOP GRANDE - 1028px+
+@media (min-width: $breakpoint-large-desktop) {
+  .header {
+    grid-template-columns: $grid-columns-desktop;
+    
+    &__title {
+      font-size: $font-size-h1-desktop;
+    }
   }
 }
