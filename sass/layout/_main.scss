@@ -1,18 +1,20 @@
-/*
-* MAIN
-*/
+// ========================================
+// MAIN
+// layout/_main.scss
+// ========================================
+
 main {
   grid-area: main;
   flex-grow: 1;
-  padding: 70px 0 2rem 0;
+  padding: $header-height-mobile 0 $spacing-xl 0;
   align-items: center;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: $color-background;
+  color: $color-text;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-  background-image: url("../images/13164433_5180058.svg");
+  background-image: $bg-image-light;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -23,40 +25,41 @@ main {
 
 // Dark theme
 .main--dark-theme {
-  background: #212121;
-  color: #e0e0e0;
-  background-image: url("../images/jeremy-bishop-8xznAGy4HcY-unsplash.jpg");
+  background: $dark-bg-secondary;
+  color: $dark-text;
+  background-image: $bg-image-dark;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: auto center;
   background-attachment: scroll;
   min-height: 100vh;
-
+  
   .hero__button:hover {
-    background-color: #000000;
-    color: white;
+    background-color: $color-black;
+    color: $color-white;
   }
 }
 
 // Responsive
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
   main {
-    padding: 80px 2rem 2rem 2rem;
+    padding: 80px $padding-tablet $spacing-xl $padding-tablet;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-tablet-max) {
   main {
     padding-top: 80px;
   }
 }
 
-@media (min-width: 1028px) {
+// DESKTOP - 1024px+
+@media (min-width: $breakpoint-desktop) {
   main {
-    padding: 100px 3rem 2rem 3rem;
+    padding: $header-height-desktop $padding-desktop $spacing-xl $padding-desktop;
     background-attachment: scroll;
   }
-
+  
   .main--dark-theme {
     background-attachment: scroll;
   }

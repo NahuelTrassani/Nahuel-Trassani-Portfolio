@@ -90,7 +90,7 @@ $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-tablet-max: 1023px;
 $breakpoint-desktop: 1024px;
-$breakpoint-large-desktop: 1028px;
+$breakpoint-large-desktop: 1024px; //antes era 1028 pero un solo break es mejor, para no cambiar en cada media query lo ajusto aca.
 
 // DIMENSIONES
 // -----------

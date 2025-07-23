@@ -1,6 +1,6 @@
 // ========================================
-// HEADER COMPONENT
-// components/_header.scss
+// HEADER
+// layout/_header.scss
 // ========================================
 
 .header {
@@ -28,9 +28,14 @@
     font-size: $font-size-h2-mobile;
     font-weight: bold;
     letter-spacing: 1px;
-    flex: auto;
+    flex: 0 1 auto;
+    margin-right: $spacing-lg;
     min-width: 0;
+
     margin-right: $spacing-md;
+    white-space: nowrap; // Evita que el texto se divida en varias líneas
+    // overflow: hidden; // Oculta el desbordamiento si es necesario
+    // text-overflow: ellipsis;
   }
 
   &__subtitle {
@@ -45,13 +50,17 @@
       padding: 0;
       margin: 0;
       display: flex;
-      flex-wrap: wrap;
-      gap: $spacing-md;
+      flex-wrap: nowrap;
+      gap: 0;
       align-items: center;
+      margin-right: $spacing-sm;
     }
 
     &-item {
-      margin: 4px 0;
+      margin: 0;
+      font-size: $font-size-small;
+      white-space: nowrap;
+      padding: 0.01rem 0.01rem;
 
       &:hover {
         transform: translateX(3px);
@@ -96,7 +105,10 @@
     align-items: center;
     gap: $spacing-sm;
     width: auto;
-
+    margin-right: 0; // Elimina cualquier margen adicional
+    flex-shrink: 0; // Evita que se achique
+    min-width: auto; // Mantiene su ancho natural
+    
     &:hover {
       background-color: rgba($color-white, 0.1);
       outline: none;
@@ -214,6 +226,9 @@
         gap: $spacing-md;
         margin: 0;
         padding: 0;
+        width: 100%;
+        flex-wrap: nowrap; // Evita que se rompan las líneas
+        justify-content: flex-end;
       }
     }
 
@@ -238,56 +253,29 @@
     &__nav {
       display: none;
     }
-    // &__title {
-    //   margin: 0;
-    //   font-size: $font-size-h1-desktop;
-    //   letter-spacing: 1px;
-    //   font-family: $font-secondary;
-    //   flex: 1;
-    //   min-width: 0;
-    //   display: flex;
-    //   align-items: center;
-    // }
   }
 }
 
 // DESKTOP - 1024px+
 @media (min-width: $breakpoint-desktop) {
   .header {
+    grid-template-columns: $grid-columns-desktop;
     // padding: $spacing-md;
     // max-height: $header-height-desktop;
     // height: $header-height-desktop !important;
 
-    // &__title {
-    // margin: 0;
-    // font-size: $font-size-h1-desktop;
-    // letter-spacing: 1px;
-    // font-family: $font-secondary;
-    // flex: 1;
-    // min-width: 0;
-    // display: flex;
-    // align-items: center;
-    // }
-
     &__nav {
-      display: flex; 
-      margin-left: auto; 
-      margin-right: 8rem; 
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 0 0 auto;
+      gap: 0;
+      margin-right: $spacing-md; // Añade margen entre el nav y el borde
     }
   }
 
   .dropdown__toggle {
     display: none !important;
-  }
-}
-
-// DESKTOP GRANDE - 1028px+
-@media (min-width: $breakpoint-large-desktop) {
-  .header {
-    grid-template-columns: $grid-columns-desktop;
-
-    // &__title {
-    //   font-size: $font-size-h1-desktop;
-    // }
   }
 }
