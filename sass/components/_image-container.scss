@@ -3,13 +3,13 @@
 
 .image-container {
   width: 100%;
-  max-width: 200px; // Más pequeño en mobile
-  border-radius: 50%;
+  max-width: $image-size-mobile; // Más pequeño en mobile
+  border-radius: $border-radius-round;
   height: auto;
   overflow: hidden;
   text-align: center;
   display: block;
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto $spacing-lg auto;
 
   &__img {
     max-width: 100%;
@@ -21,28 +21,28 @@
   &__caption {
     text-align: center;
     color: #0e0b0bd7;
-    margin-top: 0.5rem;
+    margin-top: $spacing-sm;
     display: block;
-    font-size: 1rem;
+    font-size: $font-size-normal;
   }
 }
 
 // Dark theme adaptations
 .content-section--dark-theme .image-container__caption {
-  color: #e0e0e0;
+  color: $dark-text;
 }
 
 // Media queries
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
   .image-container {
-    max-width: 300px;
-    margin-bottom: 2rem;
+    max-width: $image-size-tablet;
+    margin-bottom: $spacing-xl;
   }
 }
 
-@media (min-width: 1028px) {
+@media (min-width: $breakpoint-large-desktop) {
   .image-container {
-    max-width: 350px;
+    max-width: $image-size-desktop;
     margin-bottom: 2.5rem;
   }
 }

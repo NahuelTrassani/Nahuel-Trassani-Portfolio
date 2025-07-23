@@ -2,15 +2,15 @@
 // Secciones de contenido principales
 
 .content-section {
-  padding: 2rem 1rem; // Reducido para mobile
-  scroll-margin-top: 70px; // Ajustado para header mobile
+  padding: $padding-tablet $padding-mobile; // Reducido para mobile
+  scroll-margin-top: $header-height-mobile; // Ajustado para header mobile
   text-align: left;
-  margin-bottom: 1rem;
-  background-color: #fff;
-  border-radius: 8px; // Reducido para mobile
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin: 1rem; // Márgenes laterales más pequeños
-  border: 1px solid #082f52; // Border más sutil
+  margin-bottom: $spacing-md;
+  background-color: $color-white;
+  border-radius: $border-radius-md; // Reducido para mobile
+  box-shadow: $box-shadow-medium;
+  margin: $spacing-md; // Márgenes laterales más pequeños
+  border: 1px solid $color-primary-dark; // Border más sutil
 
   &__inner {
     max-width: 100%; // Usa todo el ancho disponible en mobile
@@ -20,10 +20,10 @@
   }
 
   &__title {
-    font-size: 1.5rem; // Reducido para mobile
-    margin-bottom: 1rem;
+    font-size: $font-size-h2-mobile; // Reducido para mobile
+    margin-bottom: $spacing-md;
     text-align: center;
-    color: #0c5ca3;
+    color: $color-primary;
     line-height: 1.2;
   }
 
@@ -34,25 +34,25 @@
   }
 
   &__link {
-    color: #0011ff;
+    color: $color-accent;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color $transition-normal;
     word-break: break-word; // Evita overflow en emails largos
 
     &:hover {
-      color: #2980b9;
+      color: $color-accent-hover;
     }
 
     &--social {
-      color: #0011ff;
+      color: $color-accent;
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: color $transition-normal;
       display: flex;
       align-items: center;
       font-size: 0.95rem;
 
       &:hover {
-        color: #2980b9;
+        color: $color-accent-hover;
       }
     }
   }
@@ -64,7 +64,7 @@
   }
 
   &__list-item {
-    margin-bottom: 0.5rem;
+    margin-bottom: $spacing-sm;
   }
 
   &__icon {
@@ -75,23 +75,23 @@
 
 // Dark theme adaptations
 .content-section--dark-theme {
-  background-color: #333;
-  color: #e0e0e0;
-  border-color: #555;
+  background-color: $dark-bg-card;
+  color: $dark-text;
+  border-color: $dark-border;
 
   .content-section__title {
-    color: #f5f5f5;
+    color: $dark-text-primary;
   }
 
   .content-section__link {
-    color: #ffffff;
+    color: $color-white;
 
     &:hover {
       color: #0062ff;
     }
 
     &--social {
-      color: #ffffff;
+      color: $color-white;
 
       &:hover {
         color: #0062ff;
@@ -101,29 +101,29 @@
 }
 
 // Media queries
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
   .content-section {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
+    max-width: $content-section-max-width;
+    margin: $padding-tablet auto;
+    padding: $padding-tablet;
     scroll-margin-top: 90px;
-    border-radius: 15px;
+    border-radius: $border-radius-xl;
 
     &__title {
-      font-size: 2rem;
+      font-size: $font-size-h2-tablet;
     }
 
     &__text {
-      font-size: 1rem;
+      font-size: $font-size-normal;
     }
   }
 }
 
-@media (min-width: 1028px) {
+@media (min-width: $breakpoint-large-desktop) {
   .content-section {
-    max-width: 1000px;
-    padding: 3rem;
-    scroll-margin-top: 100px;
+    max-width: $container-max-width;
+    padding: $padding-desktop;
+    scroll-margin-top: $header-height-desktop;
 
     &__title {
       font-size: 2em;

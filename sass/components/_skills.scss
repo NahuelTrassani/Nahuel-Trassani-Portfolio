@@ -4,21 +4,21 @@
 .skills {
   &__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: $skills-columns-mobile;
+    grid-template-rows: $skills-rows-mobile;
     gap: 0.7rem;
     padding: 0;
     margin: 0;
-    max-width: 678px;
+    max-width: $skills-max-width;
   }
 
   &__item {
     // background: linear-gradient(135deg, #193e58 0%, #bbdefb 100%);
-    padding: 1rem 0.75rem;
-    border-radius: 12px;
+    padding: $spacing-md $spacing-sm;
+    border-radius: $border-radius-lg;
     text-align: center;
-    border: 2px solid #dee2e6;
-    transition: all 0.3s ease;
+    border: 2px solid $color-border-form;
+    transition: all $transition-normal;
     font-size: 0.9rem;
     font-weight: 600;
     color: #495057;
@@ -44,20 +44,20 @@
 
 // Dark theme adaptations
 .skills__item--dark-theme {
-  background-color: #444;
-  border-color: #666;
-  color: #e0e0e0;
+  background-color: $dark-bg-card-hover;
+  border-color: $dark-border-light;
+  color: $dark-text;
 
   &:hover {
-    background-color: #555;
+    background-color: $dark-border;
   }
 }
 
 // Media queries
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
   .skills__container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: $skills-columns-tablet;
+    grid-template-rows: $skills-rows-tablet;
     gap: 1.25rem;
     padding: 0;
     margin: 0;
@@ -65,28 +65,28 @@
   }
 
   .skills__item {
-    padding: 1.25rem 1rem;
+    padding: 1.25rem $spacing-md;
     min-height: 70px;
-    font-size: 1rem;
-    border-radius: 12px;
+    font-size: $font-size-normal;
+    border-radius: $border-radius-lg;
   }
 }
 
-@media (min-width: 1028px) {
+@media (min-width: $breakpoint-large-desktop) {
   .skills__container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: $skills-columns-desktop;
+    grid-template-rows: $skills-rows-desktop;
+    gap: $spacing-lg;
     padding: 0;
     margin: 0;
-    max-width: 678px; // Opcional: limitar el ancho total
+    max-width: $skills-max-width; // Opcional: limitar el ancho total
   }
 
   .skills__item {
-    padding: 1.5rem 1.25rem;
+    padding: $spacing-lg 1.25rem;
     min-height: 80px;
     font-size: 1.1rem;
-    border-radius: 15px;
+    border-radius: $border-radius-xl;
   }
 }

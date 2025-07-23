@@ -3,43 +3,43 @@
 
 .hero__button {
   text-decoration: none;
-  transition: color 0.3s ease;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #000000;
-  border-radius: 8px;
+  transition: color $transition-normal;
+  padding: $spacing-sm $spacing-lg;
+  border: 2px solid $color-black;
+  border-radius: $border-radius-md;
   display: inline-block;
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: black;
+  margin-top: $spacing-md;
+  font-size: $font-size-normal;
+  color: $color-black;
 
   &:hover {
-    background-color: #2c3e50;
-    color: white;
+    background-color: $color-secondary;
+    color: $color-white;
   }
 }
 
 .btn-primary-custom {
   background-color: transparent;
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 8px;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  color: $color-black;
+  border: 2px solid $color-black;
+  border-radius: $border-radius-md;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-normal;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all $transition-normal;
   text-decoration: none;
 
   &:hover {
-    background-color: #2c3e50;
-    color: white;
-    border-color: #2c3e50;
+    background-color: $color-secondary;
+    color: $color-white;
+    border-color: $color-secondary;
   }
 }
 
 // Dark theme adaptations
 .main--dark-theme .hero__button {
   &:hover {
-    background-color: #000000;
-    color: white;
+    background-color: $color-black;
+    color: $color-white;
   }
 }
