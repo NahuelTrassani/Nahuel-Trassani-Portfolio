@@ -29,10 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           sidebarThemeIcon.classList.remove("fa-sun");
           sidebarThemeIcon.classList.add("fa-moon");
-          headerThemeToggle.setAttribute(
-            "aria-label",
-            "Cambiar a tema oscuro"
-          );
+          headerThemeToggle.setAttribute("aria-label", "Cambiar a tema oscuro");
           headerThemeToggle.setAttribute("title", "Cambiar a tema oscuro");
         }
       }
@@ -245,13 +242,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Manejar clicks en items del dropdown (excepto el tema que ya está manejado arriba)
-  document.querySelectorAll(".dropdown__item:not(.dropdown__theme-item)").forEach((item) => {
-    item.addEventListener("click", function (e) {
-      // Cerrar el dropdown al hacer click en un item de navegación
-      const dropdown = this.closest(".dropdown");
-      if (dropdown) {
-        dropdown.classList.remove("dropdown--show");
-      }
+  document
+    .querySelectorAll(".dropdown__item:not(.dropdown__theme-item)")
+    .forEach((item) => {
+      item.addEventListener("click", function (e) {
+        // Cerrar el dropdown al hacer click en un item de navegación
+        const dropdown = this.closest(".dropdown");
+        if (dropdown) {
+          dropdown.classList.remove("dropdown--show");
+        }
+      });
     });
+});
+
+document.querySelectorAll(".skills__item").forEach((item) => {
+  item.addEventListener("mouseenter", function () {
+    this.classList.add("flipped");
+  });
+
+  item.addEventListener("mouseleave", function () {
+    this.classList.remove("flipped");
   });
 });

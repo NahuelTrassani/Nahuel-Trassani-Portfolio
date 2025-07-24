@@ -20,6 +20,14 @@
     padding: $spacing-md;
     margin-bottom: $spacing-md;
     box-shadow: $box-shadow-light;
+    transition: 0.5s, color 0.1s;
+    -webkit-transition: 0.5s, color 0.1s;
+    -moz-transition: 0.5s, color 0.1s;
+    &:hover {
+      transform: scale3d(1.1, 1.2, 0.3);
+      -webkit-transform: scale3d(1.1, 1.2, 0.3);
+      -moz-transform: scale3d(1.1, 1.2, 0.3);
+    }
   }
 
   &__card-title {
