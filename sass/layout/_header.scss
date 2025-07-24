@@ -14,7 +14,6 @@
   width: 100%;
   z-index: $z-index-header;
   display: flex;
-  grid-area: header;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
@@ -22,20 +21,22 @@
   box-sizing: border-box !important;
   margin: 0 !important;
   height: $header-height-mobile !important;
+  // Añadir un pequeño padding extra para evitar que se corte el contenido
+  padding-right: $spacing-lg;
 
   &__title {
     margin: 0;
     font-size: $font-size-h2-mobile;
     font-weight: bold;
     letter-spacing: 1px;
-    flex: 0 1 auto;
-    margin-right: $spacing-lg;
-    min-width: 0;
-
+    flex: 0 0 auto; // Cambiado de flex: 0 1 auto
     margin-right: $spacing-md;
-    white-space: nowrap; // Evita que el texto se divida en varias líneas
-    // overflow: hidden; // Oculta el desbordamiento si es necesario
-    // text-overflow: ellipsis;
+    min-width: 0;
+    white-space: nowrap;
+    // Añadir un max-width para evitar que el título se extienda demasiado
+    max-width: calc(50% - $spacing-md);
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__subtitle {
@@ -44,6 +45,9 @@
 
   &__nav {
     display: none;
+    // Asegurar que el nav se mantenga a la derecha
+    flex: 0 0 auto;
+    margin-left: auto;
 
     &-list {
       list-style: none;
@@ -53,7 +57,8 @@
       flex-wrap: nowrap;
       gap: 0;
       align-items: center;
-      margin-right: $spacing-sm;
+      // Remover margin-right para evitar espaciado innecesario
+      margin-right: 0;
     }
 
     &-item {
@@ -61,6 +66,8 @@
       font-size: $font-size-small;
       white-space: nowrap;
       padding: 0.01rem 0.01rem;
+      // Asegurar que no se compriman los items
+      flex-shrink: 0;
 
       &:hover {
         transform: translateX(3px);
@@ -75,6 +82,9 @@
       transition: background-color $transition-normal;
       font-weight: 600;
       font-size: $font-size-normal;
+      // Asegurar que el texto no se corte
+      display: block;
+      white-space: nowrap;
 
       &:hover,
       &:focus {
@@ -105,10 +115,11 @@
     align-items: center;
     gap: $spacing-sm;
     width: auto;
-    margin-right: 0; // Elimina cualquier margen adicional
-    flex-shrink: 0; // Evita que se achique
-    min-width: auto; // Mantiene su ancho natural
-    
+    margin-right: 0;
+    flex-shrink: 0;
+    min-width: auto;
+    white-space: nowrap;
+
     &:hover {
       background-color: rgba($color-white, 0.1);
       outline: none;
@@ -124,8 +135,19 @@
     background-color: $color-border;
     margin: $spacing-sm 0;
   }
-}
 
+  // Contenedor para el nav y theme toggle
+  &__nav-container {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+}
+.dropdown__toggle {
+  display: flex !important;
+}
 // ========================================
 // TEMA OSCURO
 // ========================================
@@ -194,9 +216,13 @@
   .header {
     padding: $spacing-sm;
     min-height: 60px;
+    // Reducir padding en móviles para dar más espacio
+    padding-right: $spacing-md;
 
     &__title {
       font-size: 1.3rem;
+      // Permitir más espacio para el título en móviles
+      max-width: calc(60% - $spacing-sm);
     }
 
     &__toggle-theme {
@@ -209,13 +235,13 @@
 // TABLET - 768px+
 @media (min-width: $breakpoint-tablet) {
   .header {
-    //    padding: $spacing-md;
-    //    min-height: $header-height-tablet;
-    //   height: $header-height-tablet !important;
+    // Aumentar padding para dar más espacio al contenido
+    padding-right: $spacing-xl;
 
-    //    &__title {
-    //      font-size: 1.3rem;
-    //    }
+    &__title {
+      // Permitir más espacio para el título en tablets
+      max-width: calc(40% - $spacing-md);
+    }
 
     &__nav {
       display: none;
@@ -223,35 +249,23 @@
       &-list {
         display: flex;
         list-style: none;
-        gap: $spacing-md;
+        gap: $spacing-sm;
         margin: 0;
         padding: 0;
-        width: 100%;
-        flex-wrap: nowrap; // Evita que se rompan las líneas
+        width: auto; // Cambiado de width: 100%
+        flex-wrap: nowrap;
         justify-content: flex-end;
       }
     }
 
     &__toggle-theme {
-      width: 50px;
-      height: 50px;
-      font-size: $font-size-large;
+      width: auto; // Cambiado de width: 50px
+      height: auto; // Cambiado de height: 50px
+      font-size: $font-size-normal; // Cambiado de $font-size-large
       margin-left: $spacing-md;
       color: $color-link;
       display: flex;
-    }
-  }
-
-  .dropdown__toggle {
-    display: none; // Oculto por defecto en pantallas grandes
-  }
-}
-
-// TABLET ESPECÍFICO - entre 768px y 1023px
-@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-tablet-max) {
-  .header {
-    &__nav {
-      display: none;
+      padding: $spacing-sm $spacing-md;
     }
   }
 }
@@ -259,10 +273,13 @@
 // DESKTOP - 1024px+
 @media (min-width: $breakpoint-desktop) {
   .header {
-    grid-template-columns: $grid-columns-desktop;
-    // padding: $spacing-md;
-    // max-height: $header-height-desktop;
-    // height: $header-height-desktop !important;
+    // mas padding respecto del media query anterior
+    padding-right: $spacing-xs;
+
+    &__title {
+      // Permitir más espacio para el título
+      max-width: calc(30% - $spacing-md);
+    }
 
     &__nav {
       display: flex;
@@ -271,7 +288,17 @@
       align-items: center;
       flex: 0 0 auto;
       gap: 0;
-      margin-right: $spacing-md; // Añade margen entre el nav y el borde
+      margin-right: $spacing-md;
+      // Asegurar que el nav no se comprima
+      min-width: max-content;
+      
+    }
+
+    &__nav-container {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      flex: 0 0 auto;
     }
   }
 
