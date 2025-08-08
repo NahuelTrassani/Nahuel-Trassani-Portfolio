@@ -1,5 +1,5 @@
 // ========================================
-// FOOTER 
+// FOOTER
 // layout/_footer.scss
 // ========================================
 
@@ -30,6 +30,14 @@
       border-bottom: 2px solid $color-white;
       display: inline-block;
       padding-bottom: 5px;
+    }
+
+    &-tablet {
+      display: none; // Oculto por defecto, se muestra en tablet
+    }
+
+    &-desktop {
+      display: none; // Oculto por defecto, se muestra en desktop
     }
   }
 
@@ -146,16 +154,27 @@
   .footer {
     padding: $spacing-lg;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center; // Centrar las secciones
+    align-items: flex-start; // Alinear al inicio verticalmente
+    gap: $spacing-xl;
 
     &__section {
-      width: auto;
+      flex: 1; // Cada sección ocupa el mismo espacio
       margin-bottom: 0;
-      margin-right: $spacing-xl;
-      text-align: left;
+      margin-right: 0; // Remover margin-right ya que usamos gap
+      text-align: center; // Mantener centrado el texto
+      max-width: 250px; // Limitar ancho máximo para evitar que se estiren demasiado
 
       &-title {
         font-size: 1.1rem;
+      }
+
+      &-tablet {
+        display: flex; // Mostrar sección de tablet
+        flex-direction: column;
+        align-items: center; // Centrar contenido
+        flex: 1;
+        max-width: 250px;
       }
     }
 
@@ -179,13 +198,32 @@
 @media (min-width: $breakpoint-desktop) {
   .footer {
     padding: $spacing-xl;
+    gap: $spacing-xxl; // Mayor espacio entre secciones en desktop
+    width: 100%; // Asegurar que ocupe todo el ancho
 
     &__section {
-      margin-right: $spacing-xxl;
+      flex: 1; // Mantener el mismo ancho para las 3 secciones
+      max-width: 280px; // Incrementar ligeramente el ancho máximo
 
       &-title {
         font-size: $font-size-large;
         margin-bottom: $spacing-md;
+      }
+
+      &-tablet {
+        display: flex; // Mostrar sección de tablet
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        max-width: 280px;
+      }
+
+      &-desktop {
+        display: flex; // Mostrar sección de desktop
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        max-width: 280px;
       }
     }
 
