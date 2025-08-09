@@ -1,0 +1,84 @@
+// ========================================
+// CARTA DE PRESENTACION COMPONENT
+// components/_carta-presentacion.scss
+// ========================================
+
+.carta-presentacion {
+  &__lista {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__acciones {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    margin-top: $spacing-lg;
+  }
+
+  li {
+    position: relative;
+    margin: $spacing-md 0;
+    padding: ($spacing-sm + $spacing-xs) ($spacing-md + $spacing-sm)
+      ($spacing-sm + $spacing-xs) ($spacing-xxl + $spacing-md);
+    background: linear-gradient(
+      135deg,
+      rgba($color-primary, 0.05) 0%,
+      rgba($color-accent-hover, 0.05) 100%
+    );
+    border-radius: $border-radius-md;
+    border-left: 4px solid $color-primary;
+    transition: all $transition-normal;
+
+    &::before {
+      content: "✓";
+      position: absolute;
+      left: $spacing-md;
+      top: ($spacing-sm + $spacing-xs);
+      color: $color-primary;
+      font-weight: bold;
+      font-size: ($font-size-base + 2px);
+    }
+
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        rgba($color-primary, 0.08) 0%,
+        rgba($color-accent-hover, 0.08) 100%
+      );
+    }
+  }
+}
+
+.firma-interactiva {
+  display: inline-block;
+  padding: ($spacing-md + $spacing-sm);
+  margin: ($spacing-md + $spacing-sm) 0;
+  border: 2px solid $color-primary;
+  border-radius: $border-radius-md;
+  background: linear-gradient(
+    135deg,
+    rgba($color-primary, 0.05) 0%,
+    rgba($color-white, 0.5) 100%
+  );
+}
+
+// ===== TEMA OSCURO =====
+.main--dark-theme {
+  .carta-presentacion__lista {
+    li {
+      background: $color-primary-dark;
+
+      &:hover {
+        background: linear-gradient(
+          135deg,
+          rgba($color-white, 0.08) 0%,
+          rgba($color-accent-hover, 0.08) 100%
+        );
+      }
+    }
+  }
+  .firma-interactiva {
+    background: $dark-bg-card;
+  }
+}

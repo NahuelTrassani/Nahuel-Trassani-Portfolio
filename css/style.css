@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -451,10 +452,6 @@ main {
   background-position: auto center;
   background-attachment: scroll;
   min-height: 100vh;
-}
-.main--dark-theme .hero__button:hover {
-  background-color: #000000;
-  color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -1727,8 +1724,8 @@ main {
   color: #000000;
 }
 .hero__button:hover {
-  background-color: #2c3e50;
-  color: #ffffff;
+  background-color: #2980b9;
+  color: #000000;
 }
 
 .btn-primary-custom {
@@ -1748,8 +1745,11 @@ main {
   border-color: #2c3e50;
 }
 
+.main--dark-theme .hero__button {
+  color: #ffffff;
+}
 .main--dark-theme .hero__button:hover {
-  background-color: #000000;
+  background-color: #666;
   color: #ffffff;
 }
 
@@ -1952,6 +1952,56 @@ main {
   .tech-card {
     padding: 1.5rem;
   }
+}
+.carta-presentacion__lista {
+  list-style: none;
+  padding: 0;
+}
+.carta-presentacion__acciones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.carta-presentacion li {
+  position: relative;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem 0.75rem 4rem;
+  background: linear-gradient(135deg, rgba(12, 92, 163, 0.05) 0%, rgba(41, 128, 185, 0.05) 100%);
+  border-radius: 8px;
+  border-left: 4px solid #0c5ca3;
+  transition: all 0.3s ease;
+}
+.carta-presentacion li::before {
+  content: "✓";
+  position: absolute;
+  left: 1rem;
+  top: 0.75rem;
+  color: #0c5ca3;
+  font-weight: bold;
+  font-size: 18px;
+}
+.carta-presentacion li:hover {
+  background: linear-gradient(135deg, rgba(12, 92, 163, 0.08) 0%, rgba(41, 128, 185, 0.08) 100%);
+}
+
+.firma-interactiva {
+  display: inline-block;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 2px solid #0c5ca3;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(12, 92, 163, 0.05) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.main--dark-theme .carta-presentacion__lista li {
+  background: #082f52;
+}
+.main--dark-theme .carta-presentacion__lista li:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(41, 128, 185, 0.08) 100%);
+}
+.main--dark-theme .firma-interactiva {
+  background: #333;
 }
 
 /*# sourceMappingURL=style.css.map */

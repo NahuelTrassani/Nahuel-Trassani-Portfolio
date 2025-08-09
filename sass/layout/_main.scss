@@ -33,11 +33,6 @@ main {
   background-position: auto center;
   background-attachment: scroll;
   min-height: 100vh;
-  
-  .hero__button:hover {
-    background-color: $color-black;
-    color: $color-white;
-  }
 }
 
 // Responsive
