@@ -1588,4 +1588,205 @@ main {
   color: #ffffff;
 }
 
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.profile-card {
+  background: linear-gradient(135deg, #0c5ca3 0%, #2980b9 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  color: #ffffff;
+  box-shadow: 0 12px 40px rgba(12, 92, 163, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.profile-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.profile-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(12, 92, 163, 0.4);
+}
+.profile-card h3 {
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.profile-card .profile-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.profile-card .profile-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.2s ease;
+}
+.profile-card .profile-list li:last-child {
+  border-bottom: none;
+}
+.profile-card .profile-list li:hover {
+  color: #ffffff;
+}
+.profile-card .profile-list li i {
+  margin-right: 0.75rem;
+  width: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+
+.main--dark-theme .profile-card {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.main--dark-theme .profile-card h3 {
+  color: #bbdefb;
+}
+.main--dark-theme .profile-card h3::before {
+  background: #bbdefb;
+}
+.main--dark-theme .profile-list {
+  color: #e0e0e0;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+.main--dark-theme .profile-list:hover {
+  color: #bbdefb;
+}
+.main--dark-theme .profile-list i {
+  color: #bbdefb;
+}
+
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .profile-card {
+    padding: 2rem;
+  }
+}
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  max-width: 1200px;
+}
+
+.tech-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.tech-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0c5ca3, #2980b9, #0011ff);
+}
+.tech-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  border-color: rgba(12, 92, 163, 0.2);
+}
+.tech-card h3 {
+  color: #0c5ca3;
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tech-card h3::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #0c5ca3;
+  border-radius: 50%;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tech-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  color: #555;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: color 0.2s ease;
+}
+.tech-list li:last-child {
+  border-bottom: none;
+}
+.tech-list li:hover {
+  color: #0c5ca3;
+}
+.tech-list li i {
+  margin-right: 0.75rem;
+  width: 20px;
+  color: #0c5ca3;
+  font-size: 1.1rem;
+}
+
+.main--dark-theme .tech-card {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.main--dark-theme .tech-card h3 {
+  color: #bbdefb;
+}
+.main--dark-theme .tech-card h3::before {
+  background: #bbdefb;
+}
+.main--dark-theme .tech-list li {
+  color: #e0e0e0;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+.main--dark-theme .tech-list li:hover {
+  color: #bbdefb;
+}
+.main--dark-theme .tech-list li i {
+  color: #bbdefb;
+}
+
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .tech-card {
+    padding: 1.5rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

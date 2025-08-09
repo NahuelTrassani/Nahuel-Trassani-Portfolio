@@ -18,21 +18,7 @@
 </head>
 
 <body>
-  <div class="sidebar">
-    <!-- <nav class="sidebar__nav">
-      <ul class="sidebar__nav-list">
-        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#sobre-mi" title="Sobre Mí"><i
-              class="fa-solid fa-user"></i></a></li>
-        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#habilidades" title="Habilidades"><i
-              class="fa-solid fa-code"></i></a></li>
-        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#proyectos" title="Proyectos"><i
-              class="fa-solid fa-briefcase"></i></a></li>
-        <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#contacto" title="Contacto"><i
-              class="fa-solid fa-envelope"></i></a></li>
-      </ul>
-
-    </nav> -->
-  </div>
+  <div class="sidebar"></div>
 
   <header class="header">
     <h1 class="header__title">Nahuel Trassani</h1>
@@ -48,7 +34,6 @@
             <i class="fa-solid fa-arrow-right"></i></a></li>
         <li class="header__nav-item"><a class="header__nav-link" href="../pages/contacto.html">Contacto
             <i class="fa-solid fa-arrow-right"></i></a></li>
-        <!-- toggle  -->
         <li class="header__nav-item">
           <button class="header__toggle-theme" aria-label="Cambiar tema">
             <i class="dropdown__icon fa-regular fa-sun"></i>
@@ -70,7 +55,6 @@
         </button>
 
         <div class="dropdown__menu dropdown__menu--wide">
-
           <a class="dropdown__item" href="../index.html">
             <i class="dropdown__icon fas fa-user"></i>
             <div class="dropdown__content">
@@ -108,11 +92,10 @@
           <button class="dropdown__theme-item" id="mobileThemeToggle" aria-label="Cambiar tema">
             <i class="dropdown__icon fa-regular fa-sun"></i>
             <div class="dropdown__content">
-              <div class=" dropdown__title">Cambiar Tema</div>
+              <div class="dropdown__title">Cambiar Tema</div>
               <div class="dropdown__description">Modo claro/oscuro</div>
             </div>
           </button>
-
         </div>
       </div>
     </div>
@@ -121,32 +104,78 @@
   <main id="habilidades-page">
     <section class="content-section">
       <h2>Habilidades</h2>
-      <p>Como desarrollador full-stack, domino una amplia gama de tecnologías modernas que me permiten crear soluciones
-        web completas y eficientes. Mi experiencia abarca desde el desarrollo frontend hasta la implementación de APIs
-        robustas y gestión de bases de datos.</p>
+      <p>Desarrollador full-stack especializado en crear soluciones web modernas, eficientes y escalables. Desde
+        interfaces impactantes hasta APIs robustas.</p>
 
-      <div class="certificados">
-        <div>
-          <h3>Desarrollo Frontend</h3>
-          <div class="placeholder-image"></div>
-          <p><i class="fab fa-js-square"></i> JavaScript ES6+: Programación funcional, async/await, módulos</p>
-          <p><i class="fab fa-react"></i> React.js: Hooks, Context API, Redux, Next.js</p>
-          <p><i class="fab fa-vuejs"></i> Vue.js: Composition API, Vuex, Nuxt.js</p>
-          <p><i class="fab fa-angular"></i> Angular: TypeScript, RxJS, Angular Material</p>
-          <p><i class="fab fa-html5"></i> HTML5 & CSS3: Semantic HTML, Flexbox, Grid, Animations</p>
-          <p><i class="fab fa-sass"></i> Preprocesadores: SASS, LESS, Styled Components</p>
-          <p><i class="fas fa-mobile-alt"></i> Responsive Design: Bootstrap, Tailwind CSS, Mobile-first</p>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3>Frontend</h3>
+          <ul class="tech-list">
+            <li><i class="fab fa-js-square"></i> JavaScript ES6+ & TypeScript</li>
+            <li><i class="fab fa-react"></i> React.js, Next.js</li>
+            <li><i class="fab fa-vuejs"></i> Vue.js, Nuxt.js</li>
+            <li><i class="fab fa-html5"></i> HTML5, CSS3, SASS</li>
+            <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+          </ul>
         </div>
-        <div>
-          <h3>Desarrollo Backend</h3>
-          <div class="placeholder-image"></div>
-          <p><i class="fab fa-node-js"></i> Node.js: Express, REST APIs, GraphQL</p>
-          <p><i class="fab fa-python"></i> Python: Django, Flask, FastAPI</p>
-          <p><i class="fab fa-php"></i> PHP: Laravel, CodeIgniter</p>
-          <p><i class="fas fa-database"></i> Bases de datos: MySQL, PostgreSQL, MongoDB</p>
-          <p><i class="fas fa-server"></i> Servidores: Apache, Nginx, Docker</p>
-          <p><i class="fab fa-git-alt"></i> Control de versiones: Git, GitHub, GitLab</p>
-          <p><i class="fas fa-cloud"></i> Cloud: AWS, Google Cloud, Heroku</p>
+
+        <div class="tech-card">
+          <h3>Backend</h3>
+          <ul class="tech-list">
+            <li><i class="fab fa-node-js"></i> Node.js & Express</li>
+            <li><i class="fab fa-python"></i> Python & Django</li>
+            <li><i class="fab fa-php"></i> PHP & Laravel</li>
+            <li><i class="fas fa-database"></i> MySQL, PostgreSQL, MongoDB</li>
+            <li><i class="fas fa-cloud"></i> AWS, Docker</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <h3>Tools & Workflow</h3>
+          <ul class="tech-list">
+            <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+            <li><i class="fab fa-figma"></i> Figma, Adobe XD</li>
+            <li><i class="fas fa-code"></i> VS Code, WebStorm</li>
+            <li><i class="fas fa-vial"></i> Jest, Cypress</li>
+            <li><i class="fas fa-rocket"></i> Vercel, Netlify</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <h3>Metodologías</h3>
+          <ul class="tech-list">
+            <li><i class="fas fa-users"></i> Scrum & Agile</li>
+            <li><i class="fas fa-code-branch"></i> Clean Code</li>
+            <li><i class="fas fa-vial"></i> Test-Driven Development</li>
+            <li><i class="fas fa-user-check"></i> UX/UI Focused</li>
+            <li><i class="fas fa-tachometer-alt"></i> Performance First</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Lo que me define</h2>
+      <p>Código limpio, soluciones innovadoras y experiencias de usuario excepcionales. Mi enfoque combina eficiencia
+        técnica con diseño centrado en el usuario.</p>
+
+      <div class="profile-grid">
+        <div class="profile-card">
+          <h3>Mi Enfoque</h3>
+          <ul class="profile-list">
+            <li><i class="fas fa-rocket"></i> Rendimiento optimizado</li>
+            <li><i class="fas fa-palette"></i> Diseño impactante</li>
+            <li><i class="fas fa-shield-alt"></i> Código seguro</li>
+            <li><i class="fas fa-mobile-alt"></i> Mobile-first</li>
+          </ul>
+        </div>
+
+        <div class="profile-card">
+          <h3>Experiencia</h3>
+          <ul class="profile-list">
+            <li><i class="fas fa-shopping-cart"></i> E-commerce</li>
+            <li><i class="fas fa-chart-bar"></i> Dashboards</li>
+            <li><i class="fas fa-globe"></i> Corporate Websites</li>
+            <li><i class="fas fa-cogs"></i> Management Systems</li>
+          </ul>
         </div>
       </div>
     </section>

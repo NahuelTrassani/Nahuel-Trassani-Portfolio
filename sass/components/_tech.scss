@@ -1,0 +1,135 @@
+// ========================================
+// TECH CARDS COMPONENT
+// components/_tech-cards.scss
+// ========================================
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-lg;
+  margin: $spacing-xl 0;
+  max-width: 1200px;
+}
+
+.tech-card {
+  background: linear-gradient(135deg, $color-white 0%, #f8f9fa 100%);
+  border-radius: 16px;
+  padding: $spacing-xl;
+  box-shadow: 0 8px 32px rgba($color-black, 0.1);
+  border: 1px solid rgba($color-white, 0.2);
+  transition: all $transition-normal;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      $color-primary,
+      $color-accent-hover,
+      $color-accent
+    );
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba($color-black, 0.15);
+    border-color: rgba($color-primary, 0.2);
+  }
+
+  h3 {
+    color: $color-primary;
+    margin: 0 0 $spacing-md 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: $color-primary;
+      border-radius: $border-radius-round;
+    }
+  }
+}
+
+// ===== LISTAS DE TECNOLOGÍAS =====
+.tech-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    color: $color-text-light;
+    font-weight: 500;
+    border-bottom: 1px solid rgba($color-black, 0.05);
+    transition: color $transition-fast;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    i {
+      margin-right: 0.75rem;
+      width: 20px;
+      color: $color-primary;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// ===== TEMA OSCURO =====
+.main--dark-theme {
+  .tech-card {
+    background: $gradient-dark;
+    border-color: rgba($color-white, 0.1);
+
+    h3 {
+      color: $color-link;
+
+      &::before {
+        background: $color-link;
+      }
+    }
+  }
+
+  .tech-list li {
+    color: $dark-text;
+    border-bottom-color: rgba($color-white, 0.1);
+
+    &:hover {
+      color: $color-link;
+    }
+
+    i {
+      color: $color-link;
+    }
+  }
+}
+
+// ===== RESPONSIVE =====
+@media (max-width: $breakpoint-tablet) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+
+  .tech-card {
+    padding: $spacing-lg;
+  }
+}
