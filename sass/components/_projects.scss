@@ -3,6 +3,108 @@
 // components/_proyectos.scss
 // ========================================
 
+// ======================================== INICIO estilo index.html ========================================
+.projects {
+  padding: $padding-tablet $padding-mobile;
+
+  &__inner {
+    display: flex;
+    flex-direction: column; // Stack en mobile
+    gap: $spacing-md;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__card {
+    text-align: left;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-md;
+    padding: $spacing-md;
+    margin-bottom: $spacing-md;
+    box-shadow: $box-shadow-light;
+    transition: 0.5s, color 0.1s;
+    -webkit-transition: 0.5s, color 0.1s;
+    -moz-transition: 0.5s, color 0.1s;
+    &:hover {
+      transform: scale3d(1.1, 1.2, 0.3);
+      -webkit-transform: scale3d(1.1, 1.2, 0.3);
+      -moz-transform: scale3d(1.1, 1.2, 0.3);
+    }
+  }
+
+  &__card-title {
+    margin-top: 0;
+    color: $color-secondary;
+    text-align: left;
+    font-size: $font-size-large; // Reducido para mobile
+    margin-bottom: 0.6em;
+    line-height: 1.2;
+  }
+
+  &__card-description {
+    color: $color-text-light;
+    line-height: 1.5;
+    margin-bottom: $spacing-md;
+    font-size: 0.9rem;
+  }
+
+  &__tech {
+    margin-bottom: $spacing-sm;
+    color: $color-text-muted;
+    font-size: $font-size-small;
+    text-align: left;
+  }
+
+  &__tech-title {
+    font-weight: bold;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+  }
+
+  &__tech-item {
+    background-color: #f0f0f0;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-sm;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+// Dark theme adaptations -- index.html
+.projects__card--dark-theme {
+  background-color: $dark-bg-card-hover;
+  color: $dark-text;
+  border-color: $dark-border-light;
+
+  .projects__card-title {
+    color: $dark-text-primary;
+  }
+
+  .projects__tech {
+    color: #ccc;
+  }
+
+  .projects__card-description {
+    color: #ccc;
+  }
+
+  .projects__tech-item {
+    background-color: $dark-border;
+    color: $dark-text;
+  }
+}
+// ======================================== FIN estilo index.html ========================================
+
+// Pagina de Proyectos
 .proyecto-item {
   transition: transform $transition-normal, box-shadow $transition-normal;
   cursor: pointer;
@@ -169,7 +271,6 @@
 
     &:hover {
       transform: translateY(-2px);
-       
     }
   }
 }
@@ -184,5 +285,37 @@
   .proyecto-links {
     flex-direction: column;
     gap: $spacing-sm;
+  }
+
+  // Media queries -- index.html
+  .projects__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
+  }
+
+  .projects__card {
+    padding: $spacing-lg;
+
+    &-title {
+      font-size: $font-size-h3-tablet;
+    }
+
+    &-description {
+      font-size: $font-size-normal;
+    }
+  }
+}
+
+// Media queries -- index.html
+@media (min-width: $breakpoint-large-desktop) {
+  .projects__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
+  }
+
+  .projects__card {
+    padding: $spacing-xl;
   }
 }
