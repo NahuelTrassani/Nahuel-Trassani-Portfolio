@@ -1,134 +1,188 @@
-// _projects.scss
-// Sección de proyectos
+// ========================================
+// PROYECTOS COMPONENT
+// components/_proyectos.scss
+// ========================================
 
-.projects {
-  padding: $padding-tablet $padding-mobile;
+.proyecto-item {
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  cursor: pointer;
+  border-radius: $border-radius-md;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+  border: 1px solid rgba($color-black, 0.1);
 
-  &__inner {
-    display: flex;
-    flex-direction: column; // Stack en mobile
-    gap: $spacing-md;
-    margin: 0;
-    padding: 0;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-dropdown;
   }
+}
 
-  &__card {
-    text-align: left;
-    background-color: $color-white;
-    border: 1px solid $color-border;
-    border-radius: $border-radius-md;
-    padding: $spacing-md;
-    margin-bottom: $spacing-md;
-    box-shadow: $box-shadow-light;
-    transition: 0.5s, color 0.1s;
-    -webkit-transition: 0.5s, color 0.1s;
-    -moz-transition: 0.5s, color 0.1s;
+.proyecto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $spacing-md;
+}
+
+.proyecto-status {
+  padding: $spacing-xs ($spacing-sm + $spacing-xs);
+  border-radius: $border-radius-lg;
+  font-size: ($font-size-small * 0.875);
+  font-weight: 500;
+}
+
+.status-completed {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.status-development {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.proyecto-details {
+  margin: $spacing-md 0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+  font-size: ($font-size-normal * 0.9);
+
+  i {
+    margin-right: $spacing-sm;
+    width: 16px;
+    opacity: 0.7;
+  }
+}
+
+.proyecto-links {
+  margin-top: $spacing-md;
+  display: flex;
+  gap: $spacing-md;
+}
+
+.proyecto-link {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: $font-size-small;
+  font-weight: 500;
+  transition: all $transition-fast;
+  border: 1px solid transparent;
+
+  i {
+    margin-right: $spacing-sm;
+  }
+}
+
+.link-demo {
+  background: $gradient-secondary-inverted;
+  color: $color-white;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+}
+
+.link-github {
+  background: transparent;
+  color: currentColor;
+  border-color: currentColor;
+
+  &:hover {
+    background: $gradient-secondary-inverted;
+    color: $color-white;
+  }
+}
+
+.proyectos-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-md;
+  margin: $spacing-xl 0;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  background: rgba($color-white, 0.05);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: $font-size-h1-mobile;
+  font-weight: bold;
+  margin-bottom: $spacing-sm;
+}
+
+.stat-label {
+  font-size: ($font-size-normal * 0.9);
+  opacity: 0.8;
+}
+
+.section-intro {
+  margin-bottom: $spacing-xl;
+  text-align: center;
+
+  p {
+    font-size: ($font-size-large * 0.92);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+// ===== TEMA OSCURO =====
+.main--dark-theme {
+  .proyecto-item {
+    border: 1px solid rgba($color-white, 0.1);
+
     &:hover {
-      transform: scale3d(1.1, 1.2, 0.3);
-      -webkit-transform: scale3d(1.1, 1.2, 0.3);
-      -moz-transform: scale3d(1.1, 1.2, 0.3);
+      transform: translateY(-5px);
+      box-shadow: $box-shadow-dropdown;
     }
   }
 
-  &__card-title {
-    margin-top: 0;
-    color: $color-secondary;
-    text-align: left;
-    font-size: $font-size-large; // Reducido para mobile
-    margin-bottom: 0.6em;
-    line-height: 1.2;
-  }
+  .link-demo {
+    background: transparent;
+    color: currentColor;
+    border-color: currentColor;
 
-  &__card-description {
-    color: $color-text-light;
-    line-height: 1.5;
-    margin-bottom: $spacing-md;
-    font-size: 0.9rem;
-  }
-
-  &__tech {
-    margin-bottom: $spacing-sm;
-    color: $color-text-muted;
-    font-size: $font-size-small;
-    text-align: left;
-  }
-
-  &__tech-title {
-    font-weight: bold;
-    margin-bottom: $spacing-sm;
-  }
-
-  &__tech-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: $spacing-xs;
-  }
-
-  &__tech-item {
-    background-color: #f0f0f0;
-    padding: $spacing-xs $spacing-sm;
-    border-radius: $border-radius-sm;
-    font-size: 0.75rem;
-    white-space: nowrap;
-  }
-}
-
-// Dark theme adaptations
-.projects__card--dark-theme {
-  background-color: $dark-bg-card-hover;
-  color: $dark-text;
-  border-color: $dark-border-light;
-
-  .projects__card-title {
-    color: $dark-text-primary;
-  }
-
-  .projects__tech {
-    color: #ccc;
-  }
-
-  .projects__card-description {
-    color: #ccc;
-  }
-
-  .projects__tech-item {
-    background-color: $dark-border;
-    color: $dark-text;
-  }
-}
-
-// Media queries
-@media (min-width: $breakpoint-tablet) {
-  .projects__inner {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: $spacing-xl;
-  }
-
-  .projects__card {
-    padding: $spacing-lg;
-
-    &-title {
-      font-size: $font-size-h3-tablet;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: none;
     }
+  }
 
-    &-description {
-      font-size: $font-size-normal;
+  .link-github {
+    background: transparent;
+    color: currentColor;
+    border-color: currentColor;
+
+    &:hover {
+      transform: translateY(-2px);
+       
     }
   }
 }
 
-@media (min-width: $breakpoint-large-desktop) {
-  .projects__inner {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: $spacing-xl;
+// ===== RESPONSIVE =====
+@media (max-width: $breakpoint-tablet) {
+  .proyectos-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-sm;
   }
 
-  .projects__card {
-    padding: $spacing-xl;
+  .proyecto-links {
+    flex-direction: column;
+    gap: $spacing-sm;
   }
 }
