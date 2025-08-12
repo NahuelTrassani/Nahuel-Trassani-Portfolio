@@ -1,0 +1,42 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#ffffff" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#ffffff" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Fondo azul -->
+  <rect width="32" height="32" rx="6" ry="6" fill="url(#blueGradient)"/>
+  
+  <!-- INICIALES NT con fuente sans-serif moderna -->
+  <g filter="url(#textShadow)">
+    <!-- N - Fuente sans-serif más moderna -->
+    <text x="10" y="22" 
+          font-family="Arial, Helvetica, sans-serif" 
+          font-size="16" 
+          font-weight="800" 
+          text-anchor="middle" 
+          fill="#1a1a1a">N</text>
+    
+    <!-- T - Fuente sans-serif más moderna -->
+    <text x="22" y="22" 
+          font-family="Arial, Helvetica, sans-serif" 
+          font-size="16" 
+          font-weight="800" 
+          text-anchor="middle" 
+          fill="#1a1a1a">T</text>
+  </g>
+  
+  <!-- Elementos decorativos muy sutiles -->
+  <g opacity="0.15">
+    <!-- Pequeños puntos en las esquinas -->
+    <circle cx="28" cy="4" r="0.8" fill="#ffffff"/>
+    <circle cx="4" cy="28" r="0.6" fill="#ffffff"/>
+  </g>
+</svg>
