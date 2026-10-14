@@ -1,12 +1,19 @@
 {
-  "name": "nahuel-trassani---entregable-1",
-  "version": "1.0.0",
-  "description": "<h1 align=\"center\">Hi 👋, I'm Nahuel</h1>\r <h3 align=\"center\">A passionate frontend developer from Neuquén</h3>",
-  "main": "index.js",
+  "name": "nahuel-trassani-portfolio",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.4.1",
+    "vite": "6.3.5"
+  }
 }
