@@ -43,7 +43,7 @@ const more = [
 ]
 
 const skills = [
-  { id: 'build', items: ['GeneXus 9 · 16 · 17 · 18', 'JavaScript', 'React', 'Node.js', 'Express', 'HTML', 'CSS'] },
+  { id: 'build', items: ['GeneXus 9 · 16 · 17 · 18', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express', 'HTML', 'CSS'] },
   { id: 'data', items: ['SQL Server', 'MySQL', 'PostgreSQL', 'Oracle', 'DB2', 'MongoDB', 'SQLite'] },
   { id: 'integration', items: ['REST APIs', 'Postman', 'JSON', 'Socket.io', 'External Objects'] },
   { id: 'devops', items: ['Docker', 'Jenkins', 'Tomcat', 'IIS', 'Git', 'GitHub'] },
@@ -75,7 +75,7 @@ export const content = {
     about: [
       'Soy desarrollador con más de 7 años construyendo sistemas web y móviles empresariales de punta a punta, con GeneXus como stack principal: migraciones de legacy (GeneXus 9 a 17), apps móviles offline-first e integraciones REST sobre SQL Server, MySQL, Oracle y DB2, con Docker y CI/CD.',
       'Como recurso de consultora pasé por seguros, retail, servicios de campo, petróleo y gas, exportación agrícola, salud y administración pública. Lo que más disfruto es el lado integral de la ingeniería: seguir un problema desde el síntoma hasta la causa raíz, atravesando todo el stack.',
-      'Hoy sumo el stack JavaScript moderno: React en producción, migración de módulos GeneXus a servicios REST con front en React, y Node con Express.',
+      'Hoy sumo el stack JavaScript moderno: React en producción, migración de módulos GeneXus a servicios REST con front en React, y backends en Node con Express y TypeScript.',
     ],
     stats: [
       { value: '7+', label: 'años construyendo sistemas en producción' },
@@ -107,8 +107,9 @@ export const content = {
           'Migré un reporte de presentismo de una exportación Excel en GeneXus a un servicio REST consumido por una SPA en React, en producción con datos reales de liquidación.',
           'Reconstruí el proceso que genera el presentismo y las ausencias injustificadas bajaron de 145 a 37 en un mes (−74%). Validado con nueve controles SQL sobre 331 registros, sin diferencias.',
           'Único desarrollador de una app Android offline-first (GeneXus Smart Devices): base SQLite de 64 tablas con sincronización bidireccional, firma digital, fotos y lectura de QR. En producción desde julio de 2026.',
+          'Migración del backend GeneXus a Node.js + Express + TypeScript sobre la misma base MySQL, módulo por módulo detrás de los fronts React existentes, empezando por la autenticación.',
         ],
-        tags: ['GeneXus', 'React', 'REST', 'MySQL', 'SQLite', 'Android'],
+        tags: ['GeneXus', 'React', 'Node.js', 'TypeScript', 'REST', 'MySQL', 'SQLite', 'Android'],
       },
       {
         company: 'Inenco SRL',
@@ -175,7 +176,7 @@ export const content = {
     about: [
       'I am a software developer with 7+ years building enterprise web and mobile systems across the full development cycle, with GeneXus as my main stack: legacy modernization (GeneXus 9 to 17), offline-first mobile apps and REST integrations over SQL Server, MySQL, Oracle and DB2, with Docker and CI/CD.',
       'As a consultancy resource I have worked across insurance, retail, field services, oil and gas, agricultural export, healthcare and public administration. I gravitate to the end-to-end side of engineering: tracing problems from symptom to root cause across the whole stack.',
-      'Now expanding into the modern JavaScript stack: React in production, migrating GeneXus modules to REST services with React front ends, and Node with Express.',
+      'Now expanding into the modern JavaScript stack: React in production, migrating GeneXus modules to REST services with React front ends, and Node backends with Express and TypeScript.',
     ],
     stats: [
       { value: '7+', label: 'years building production systems' },
@@ -207,8 +208,9 @@ export const content = {
           'Migrated a payroll-attendance report from a GeneXus Excel export to a REST service consumed by a React SPA, now in production with real payroll data.',
           'Rebuilt the attendance-generation process and cut unjustified absences from 145 to 37 in one month (−74%). Validated with nine SQL checks over 331 records, zero discrepancies.',
           'Sole developer of an offline-first Android app (GeneXus Smart Devices): 64-table SQLite database with bidirectional sync, digital signature, photos and QR scanning. In production since July 2026.',
+          'Migrating the GeneXus backend to Node.js + Express + TypeScript over the same MySQL database, module by module behind the existing React front ends, starting with authentication.',
         ],
-        tags: ['GeneXus', 'React', 'REST', 'MySQL', 'SQLite', 'Android'],
+        tags: ['GeneXus', 'React', 'Node.js', 'TypeScript', 'REST', 'MySQL', 'SQLite', 'Android'],
       },
       {
         company: 'Inenco SRL',
