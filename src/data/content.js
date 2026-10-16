@@ -74,7 +74,7 @@ export const content = {
     ui: { theme: 'Cambiar tema', lang: 'English', langLabel: 'Switch to English', demo: 'Ver demo', code: 'Código', present: 'Actualidad', more: 'Más proyectos', certs: 'Certificaciones', education: 'Formación' },
     about: [
       'Soy desarrollador con más de 7 años construyendo sistemas web y móviles empresariales de punta a punta, con GeneXus como stack principal: migraciones de legacy (GeneXus 9 a 17), apps móviles offline-first e integraciones REST sobre SQL Server, MySQL, Oracle y DB2, con Docker y CI/CD.',
-      'Como recurso de consultora pasé por seguros, retail, servicios de campo, petróleo y gas, exportación agrícola, salud y administración pública. Lo que más disfruto es el lado integral de la ingeniería: seguir un problema desde el síntoma hasta la causa raíz, atravesando todo el stack.',
+      'Como recurso de consultora pasé por seguros, retail, servicios de campo, petróleo y gas, exportación agrícola, salud y administración pública. Disfruto los problemas difíciles de integración, donde hay que entender todo el sistema para resolverlos.',
       'Hoy sumo el stack JavaScript moderno: React en producción, migración de módulos GeneXus a servicios REST con front en React, y backends en Node con Express y TypeScript.',
     ],
     stats: [
@@ -83,7 +83,7 @@ export const content = {
       { value: '150k', label: 'filas por día en procesos batch' },
       { value: '64', label: 'tablas en una app offline-first' },
     ],
-    languages: 'Español nativo · Inglés intermedio (lectura y escritura técnica)',
+    languages: 'Español nativo · Inglés intermedio (lectura y escritura técnica, y comprensión oral)',
     experience: [
       {
         company: 'Valkimia',
@@ -175,7 +175,7 @@ export const content = {
     ui: { theme: 'Toggle theme', lang: 'Español', langLabel: 'Cambiar a español', demo: 'Live demo', code: 'Code', present: 'Present', more: 'More projects', certs: 'Certifications', education: 'Education' },
     about: [
       'I am a software developer with 7+ years building enterprise web and mobile systems across the full development cycle, with GeneXus as my main stack: legacy modernization (GeneXus 9 to 17), offline-first mobile apps and REST integrations over SQL Server, MySQL, Oracle and DB2, with Docker and CI/CD.',
-      'As a consultancy resource I have worked across insurance, retail, field services, oil and gas, agricultural export, healthcare and public administration. I gravitate to the end-to-end side of engineering: tracing problems from symptom to root cause across the whole stack.',
+      'As a consultancy resource I have worked across insurance, retail, field services, oil and gas, agricultural export, healthcare and public administration. I enjoy hard integration problems, the kind you can only solve by understanding the whole system.',
       'Now expanding into the modern JavaScript stack: React in production, migrating GeneXus modules to REST services with React front ends, and Node backends with Express and TypeScript.',
     ],
     stats: [
@@ -184,7 +184,7 @@ export const content = {
       { value: '150k', label: 'rows per day in batch processes' },
       { value: '64', label: 'tables in an offline-first app' },
     ],
-    languages: 'Spanish: native · English: intermediate (technical reading and writing)',
+    languages: 'Spanish: native · English: intermediate (technical reading and writing, and listening comprehension)',
     experience: [
       {
         company: 'Valkimia',
